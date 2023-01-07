@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+p{
+    color: aquamarine;
+}
+/*header{
+    background-color: antiquewhite;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+*/
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
+.test{
+    background-color: antiquewhite; 
+    display: flex;
+    width: auto;
+    height: 110px;
+    justify-content: left;
+    align-content: center;
+    padding-top: 10px;
+
+}
+.test2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+h1{
+    font-size: 40px;
+    font-family: 'Comic Neue', cursive;
+}
+
+h2{
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+}
+.navBar{    
+    width: auto;
+    height: 30px;
+    background-color: rgb(212, 128, 17);
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    justify-content:space-around;
+    align-items: center;
+    
+    
+}
+
+.navBar li{
+    list-style-type: none;
+    list-style-position: inside;
+    font-weight: 600;
+    
+}
+.navBar li a{
+    text-decoration: none;
+    color: black;
+}
+
+div{
+    background-color: antiquewhite;
+}
+
+/*.Footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}*/
+.test3{
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+@media (max-width: 768px){
+    .subtitulo {
+        
+    }
+}
+
+/*footer
+.facebook{   
+    width: 30px;
+    height: 30px;
+}
+.whatsapp{
+    width: 30px;
+    height: 30px;
+}
+*/
