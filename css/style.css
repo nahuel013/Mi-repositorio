@@ -1,22 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
-p{
-    color: rgb(0, 0, 0);
-    text-align: center;
-    font-size: 20px;
+body {
+    background-color: antiquewhite;
 }
 
-.logo{
+.logo {
+    margin-left: 20px;
     width: 100px;
     height: 100px;
 }
 
-.test{
-    background-color: antiquewhite; 
+.test {
+    background-color: antiquewhite;
     display: flex;
     width: auto;
     height: 110px;
@@ -25,7 +24,8 @@ p{
     padding-top: 10px;
 
 }
-.test2{
+
+.test2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -33,59 +33,72 @@ p{
     gap: 10px;
 }
 
-h1{
+h1 {
+    margin-left: 5px;
     font-size: 40px;
     font-family: 'Comic Neue', cursive;
+    color: rgb(134, 8, 10)
 }
 
-h2{
+h2 {
+    margin-left: 5px;
     font-size: 30px;
     font-family: 'Dancing Script', cursive;
+    color: rgb(134, 8, 10)
 }
-.navBar{    
+
+.navBar {
     width: auto;
-    height: 30px;
-    background-color: rgb(212, 128, 17);
+    height: auto;
+    background-color: rgb(250, 171, 120);
     display: flex;
     list-style: none;
     gap: 20px;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
-    
-    
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
 }
 
-.navBar li{
+.navBar li {
     list-style-type: none;
     list-style-position: inside;
-    font-weight: 600;
-    
-}
-.navBar li a{
-    text-decoration: none;
-    color: black;
+
 }
 
-div{
+.navBar li a {
+    text-decoration: none;
+    color: rgb(203, 237, 149)
+}
+
+.navBar li:hover {
+    transform: scale(1.2);
+}
+
+div {
     background-color: antiquewhite;
 }
 
-.test3{
+.test3 {
     display: flex;
-    justify-content:space-around ;
+    justify-content: space-around;
     align-items: center;
     text-decoration: none;
     list-style: none;
+    padding-top: 20px;
 }
 
 /*estilos de galeria*/
-.galetor{
+.galetor {
     background-color: antiquewhite;
     text-align: center;
     color: brown;
 }
 
-.galeria{
+.galeria {
     background-color: antiquewhite;
     width: 98%;
     margin: auto;
@@ -95,59 +108,67 @@ div{
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.galeria li{
+
+.galeria li {
     margin: 5px;
 }
-.galeria img{
-    width: 250;
-    height: 200;
+
+.galeria img {
+    width: 300;
+    height: 250;
 }
-.modelismo{
+
+.modelismo {
     display: none;
 }
+
 .modelismo:target {
     display: block;
     position: fixed;
-    background-color: rgba(255, 235, 205, 0.199);
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
-.modelismo p{
+
+.modelismo p {
     color: rgb(241, 129, 24);
     font-size: 30px;
     text-align: center;
-    margin: 15px 0;
+    margin: 15px;
+
 }
 
-
-.t1{
+.t1 {
     width: 100%;
-    height: 40%;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
 }
-.t1 a{
+
+.t1 a {
     color: white;
     font-size: 40px;
     text-decoration: none;
     margin: 0 10px;
 }
-.imagen a:nth-child(2){
+
+.imagen a:nth-child(2) {
     margin: 0;
     height: 100%;
     flex-shrink: 2;
 }
-.t1 img{
+
+.t1 img {
     width: 500px;
     height: 100%;
     max-width: 100%;
     border: 7px solid white;
     box-sizing: border-box;
 }
+
 .cerrar {
     display: block;
     background-color: white;
@@ -160,4 +181,76 @@ div{
     padding: 5px;
     border-radius: 50%;
     line-height: 25px;
+}
+
+/*contacto.html*/
+.contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*keyframes*/
+.galeria li {
+    -webkit-animation: flip-in-ver-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: flip-in-ver-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.test2{
+    -webkit-animation: flip-in-ver-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: flip-in-ver-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes flip-in-ver-right {
+    0% {
+        -webkit-transform: rotateY(-80deg);
+        transform: rotateY(-80deg);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes flip-in-ver-right {
+    0% {
+        -webkit-transform: rotateY(-80deg);
+        transform: rotateY(-80deg);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/*responsive*/
+@media (max-width:768px) {
+
+    .subtitulo {
+        font-size: 0rem;
+    }
+
+    .navBar {
+        background-color: rgb(250, 171, 120);
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width:320px) {
+    .navBar {
+        background-color: rgb(134, 8, 10);
+        flex-direction: column;
+        align-items: center;
+
+    }
 }
