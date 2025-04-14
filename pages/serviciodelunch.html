@@ -1,76 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menchu Tortas</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="shortcut icon" href="./assets/img/MENCHU TORTAS.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menchu Tortas</title>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Comic+Neue:wght@700&display=swap" rel="stylesheet" />
 
+  <!-- Estilos -->
+  <link rel="shortcut icon" href="../assets/img/MENCHU TORTAS.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Scripts Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Estilos personalizados -->
+  <style>
+    .carousel-inner > .item > img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+    }
+
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.178);
+      padding: 10px;
+    }
+
+    .carousel-control .glyphicon {
+      color: rgb(134, 8, 10)
+    }
+    .navbar-nav li a {
+        color: rgb(134, 8, 10) !important;
+        text-align: center;
+        justify-content: space-around;
+        background-color: rgb(250, 171, 120);
+    } 
+    nav .navBar {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: rgb(250, 171, 120);
+      margin: 0;
+    }
+
+    nav .navBar li {
+      margin: 10px;
+    }
+
+    nav .navBar a {
+      text-decoration: none;
+      font-weight: bold;
+      color:rgb(134, 8, 10)
+    }
+
+    .logo img {
+      height: 80px;
+    }
+
+    .titulo {
+      font-family: 'Dancing Script', cursive;
+      text-align: center;
+      font-size: 3em;
+      margin-top: 10px;
+    }
+
+    .subtitulo {
+      font-family: 'Comic Neue', cursive;
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    footer .test3 {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
+
+    footer .test3 li {
+      margin: 10px;
+    }
+
+    footer .test3 img {
+      height: 30px;
+      width: 30px;
+    }
+    h3{
+        color: black;
+    }
+  </style>
 </head>
+
 <body>
-    <body>
-        <div >
-            <div class="test"> 
-                <div class="logo"><a href="../index.html"><img src="../assets/img/MENCHU TORTAS.png" alt=""></a>
-                </div>
-                <div>
-                    <h1 class="titulo">MENCHU TORTAS</h1>
-                    <h2 class="subtitulo">Tortas, Mesas Dulces y Servicio de Lunch - Repostería a Domicilio</h2>
-                </div>
-                </div>
-            <nav>
-                <ul class="navBar">
-                    <li>
-                        <a href="../pages/tortas.html">TORTAS</a>
-                    </li>
-                    <li>
-                        <a href="../pages/serviciodelunch.html">SERVICIO DE LUNCH</a>
-                    </li>
-                    <li>
-                        <a href="../pages/mesasdulces.html">MESAS DULCES</a>
-                    </li>
-                    <li>
-                        <a href="../pages/contacto.html">CONTACTO</a>
-                    </li>
-                </ul>
-            </nav>
+
+  <header>
+    <div class="test text-center">
+      <div class="logo">
+        <a href="../index.html"><img src="../assets/img/MENCHU TORTAS.png" alt="Logo Menchu" /></a>
+      </div>
+      <h1 class="titulo">MENCHU TORTAS</h1>
+      <h2 class="subtitulo">Tortas, Mesas Dulces y Servicio de Lunch - Repostería a Domicilio</h2>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Botón hamburguesa para móviles -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-content">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Logo o título opcional -->
+            <a class="navbar-brand" href="../index.html"></a>
+          </div>
+      
+          <!-- Links del menú -->
+          <div class="collapse navbar-collapse" id="navbar-content">
+            <ul class="nav navbar-nav">
+              <li><a href="../pages/Nosotros.html">NOSOTROS</a></li>
+              <li><a href="../pages/tortas.html">TORTAS</a></li>
+              <li><a href="../pages/serviciodelunch.html">SERVICIO DE LUNCH</a></li>
+              <li><a href="../pages/mesasdulces.html">MESAS DULCES</a></li>
+              <li><a href="../pages/contacto.html">CONTACTO</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+  </header>
+
+  <main class="container py-5 text-center">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicadores -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="../assets/img/mesa-dulce.jpeg" alt="Mesa dulce" />
+          <div class="carousel-caption">
+            <h3>Mesa dulce</h3>
+            <p>A gusto y placer del cliente.</p>
+          </div>
         </div>
 
-    <main>
-    <p>Servicio de lunch</p>
-    
-
-    </main>
-
-    <footer>
-        <div>
-            <ul class="test3">
-            <li><a href="https://m.facebook.com/MenchuTortasArtesanalesViedma?eav=Afb90Pl1g7GGPlMG83APz_qJ2Qaw8nOwE9O417ms9kOJ9yjpMTLKi6sltDeDqAEhc0k&tsid=0.9915757568776988&source=result"><img
-                src="../assets/img/facebook icon.png" alt="Menchu tortas facebook"></a>
-            </li>
-            <li>
-                <a
-                href="https://api.whatsapp.com/send?phone=%2B542920526662&fbclid=IwAR0e4PF0JdclLK18hnFa6nXwf69hYXHR5wT_e_tlvZ5_vT7s-lZjC915pVs"><img
-                    src="../assets/img/whatsapp icon.jpg" alt="Menchu tortas whatsapp"></a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/mariadelcarmenlopez6262/"><img src="../assets/img/instagram icon.jpg"
-                    alt="Menchu tortas Instagram"></a>
-            </li>
-        </ul>
-        
+        <div class="item">
+          <img src="../assets/img/servicio de lunch.jpg" alt="Servicio de lunch" />
+          <div class="carousel-caption">
+            <h3>Servicio de lunch</h3>
+            <p>¡Lo mejor de lo mejor!</p>
+          </div>
         </div>
 
-    </footer>
+        <div class="item">
+          <img src="../assets/img/tortas.jpg" alt="Tortas" />
+          <div class="carousel-caption">
+            <h3>Tortas</h3>
+            <p>Las tortas más ricas hechas con la mejor calidad.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <ul class="test3">
+      <li><a href="https://m.facebook.com/MenchuTortasArtesanalesViedma"><img src="../assets/img/facebook icon.png" alt="Facebook" /></a></li>
+      <li><a href="https://api.whatsapp.com/send?phone=%2B542920526662"><img src="../assets/img/whatsapp icon.jpg" alt="WhatsApp" /></a></li>
+      <li><a href="https://www.instagram.com/mariadelcarmenlopez6262/"><img src="../assets/img/instagram icon.jpg" alt="Instagram" /></a></li>
+    </ul>
+  </footer>
 
 </body>
+
 </html>

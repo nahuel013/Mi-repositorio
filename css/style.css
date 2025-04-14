@@ -6,6 +6,20 @@
 
 body {
     background-color: antiquewhite;
+    
+}
+
+.titulo{
+    margin-left: 5px;
+    font-size: 40px;
+    font-family: 'Comic Neue', cursive;
+    color: rgb(134, 8, 10)
+}
+.subtitulo{
+    margin-left: 5px;
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    color: rgb(134, 8, 10)
 }
 
 .logo {
@@ -46,6 +60,45 @@ h2 {
     font-family: 'Dancing Script', cursive;
     color: rgb(134, 8, 10)
 }
+.navbar {
+    background-color: #fff0f6;
+    border: none;
+}
+
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: #d63384 !important;
+}
+
+.navbar-nav > li > a {
+    color: #d63384 !important;
+    font-family: 'Comic Neue', cursive;
+}
+
+.navbar-nav > li > a:hover {
+    color: #ad1457 !important;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #d63384;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .navBar {
     width: auto;
@@ -61,6 +114,7 @@ h2 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
+    font-size: larger;
 }
 
 .navBar li {
@@ -71,7 +125,7 @@ h2 {
 
 .navBar li a {
     text-decoration: none;
-    color: rgb(203, 237, 149)
+    color: rgb(134, 8, 10)
 }
 
 .navBar li:hover {
@@ -84,11 +138,14 @@ div {
 
 .test3 {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     text-decoration: none;
     list-style: none;
     padding-top: 20px;
+}
+test3 derechos {
+
 }
 
 /*estilos de galeria*/
