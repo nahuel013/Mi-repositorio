@@ -1,313 +1,1758 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville&family=Quicksand&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-body {
-    background-color: antiquewhite;
-    
-}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1.3fr 0.1fr;
+  grid-template-areas: "header"
+ "main"
+ "footer"; }
+  .container header {
+    grid-area: header; }
+  .container main {
+    grid-area: main; }
+  .container footer {
+    grid-area: footer; }
 
-.titulo{
-    margin-left: 5px;
-    font-size: 40px;
-    font-family: 'Comic Neue', cursive;
-    color: rgb(134, 8, 10)
-}
-.subtitulo{
-    margin-left: 5px;
-    font-size: 30px;
-    font-family: 'Dancing Script', cursive;
-    color: rgb(134, 8, 10)
-}
+.menu-desktop {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1.5fr 6fr 1fr;
+  grid-template-rows: 150px;
+  grid-template-areas: "logo nav redes";
+  justify-content: space-evenly;
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  z-index: 1; }
 
-.logo {
-    margin-left: 20px;
-    width: 100px;
+.company, .destacados, .reviews, .contacto-index, .contacto-index .caja-contacto, .sobre-mi, .servicios, .servicios .servicios-caja .servicios-fotos, .para-vos, .galeria, .galeria .fotos-galeria, .contacto, .contacto .caja-contacto2, footer {
+  width: 100%;
+  height: auto; 
+  padding-top: 40px;
+  padding-bottom: 70px;}
+
+.contacto-index .caja-contacto .btn-input, .contacto .caja-contacto2 .btn-input {
+  padding: 10px;
+  border-radius: 8px;
+  border-style: none;
+  margin-top: 15px;
+  margin-left: 15px;
+  font-size: 28px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: normal; }
+
+.menu-mobile {
+  display: none; }
+
+.menu-desktop .logo {
+  grid-area: logo;
+  display: flex;
+  flex-flow: none;
+  justify-content: center;
+  align-items: center; }
+  .menu-desktop .logo .foto-logo {
+    width: 250px;
     height: 100px;
-}
-
-.test {
-    background-color: antiquewhite;
+    margin-top: 0px;
+  }
+    
+.menu-desktop nav {
+  grid-area: nav;
+  display: flex;
+  flex-flow: none;
+  justify-content: center;
+  align-items: center; }
+  .menu-desktop nav .navbar {
     display: flex;
-    width: auto;
-    height: 110px;
-    justify-content: left;
+    gap: 80px; }
+    .menu-desktop nav .navbar li {
+      list-style: none;
+      transition: all 0.5s; }
+      .menu-desktop nav .navbar li:hover {
+        transform: scale(1.1); }
+      .menu-desktop nav .navbar li a {
+        width: unset;
+        text-align: center;
+        padding: 10px 15px;
+        font-family: "Quicksand", sans-serif;
+        font-weight: normal;
+        font-size: 32px;
+        text-decoration: none;
+        color: #000000; }
+        .menu-desktop nav .navbar li a:hover {
+          font-weight: bold;
+          background-color: #c51e00;
+          border-radius: 30px; }
+
+.menu-desktop .redes {
+  grid-area: redes;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; }
+  .menu-desktop .redes .fb, .menu-desktop .redes .ig {
+    width: 50px;
+    height: 50px; }
+
+.banner {
+  width: 100%;
+  height: 950px;
+  border-radius: none;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../assets/img/fondo12.jpg);
+  display: grid;
+  align-content: center; }
+  .banner .banner-texto {
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    font-family: "Great Vibes", cursive;
+    font-weight: normal;
+    font-size: 100px;
+    font-style: normal;
+    display: grid;
+    justify-self: center; 
+    color: #ffffff;
+    background-color: #0000006c;}
+
+.company {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .company .mision img, .company .vision img, .company .valores img {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px; }
+  .company .mision .about1, .company .mision .about2, .company .mision .about3, .company .vision .about1, .company .vision .about2, .company .vision .about3, .company .valores .about1, .company .valores .about2, .company .valores .about3 {
+    width: 640px;
+    height: 650px; }
+    .company .mision .about1 h2, .company .mision .about2 h2, .company .mision .about3 h2, .company .vision .about1 h2, .company .vision .about2 h2, .company .vision .about3 h2, .company .valores .about1 h2, .company .valores .about2 h2, .company .valores .about3 h2 {
+      width: unset;
+      text-align: center;
+      padding: 20px;
+      font-family: "Quicksand", sans-serif;
+      font-weight: normal;
+      font-size: 42px; }
+    .company .mision .about1 p, .company .mision .about2 p, .company .mision .about3 p, .company .vision .about1 p, .company .vision .about2 p, .company .vision .about3 p, .company .valores .about1 p, .company .valores .about2 p, .company .valores .about3 p {
+      width: unset;
+      text-align: center;
+      padding: 50px;
+      font-family: "Libre Baskerville", serif;
+      font-weight: normal;
+      font-size: 36px;
+      margin-bottom: 10px;
+      line-height: 1.5; }
+
+.destacados {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding-bottom: 5px; }
+  .destacados h3 {
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: normal;
+    font-size: 42px; }
+
+.reviews {
+  background-color: #FFFFFF; }
+  .reviews h3 {
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: normal;
+    font-size: 42px;
+    color: #000000; }
+  .reviews .reseñas {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center; }
+    .reviews .reseñas .opinion1, .reviews .reseñas .opinion2, .reviews .reseñas .opinion3, .reviews .reseñas .opinion4 {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 15px; }
+      .reviews .reseñas .opinion1 .op1, .reviews .reseñas .opinion2 .op1, .reviews .reseñas .opinion3 .op1, .reviews .reseñas .opinion4 .op1 {
+        width: 350px;
+        height: 350px;
+        border-radius: 100%;
+        background-size: cover;
+        background-position: center;
+        background-image: url(../assets/img/avatar1.jpg); }
+      .reviews .reseñas .opinion1 .op2, .reviews .reseñas .opinion2 .op2, .reviews .reseñas .opinion3 .op2, .reviews .reseñas .opinion4 .op2 {
+        width: 350px;
+        height: 350px;
+        border-radius: 100%;
+        background-size: cover;
+        background-position: center;
+        background-image: url(../assets/img/avatar2.jpg); }
+      .reviews .reseñas .opinion1 .op3, .reviews .reseñas .opinion2 .op3, .reviews .reseñas .opinion3 .op3, .reviews .reseñas .opinion4 .op3 {
+        width: 350px;
+        height: 350px;
+        border-radius: 100%;
+        background-size: cover;
+        background-position: center;
+        background-image: url(../assets/img/avatar3.jpg); }
+      .reviews .reseñas .opinion1 .op4, .reviews .reseñas .opinion2 .op4, .reviews .reseñas .opinion3 .op4, .reviews .reseñas .opinion4 .op4 {
+        width: 350px;
+        height: 350px;
+        border-radius: 100%;
+        background-size: cover;
+        background-position: center;
+        background-image: url(../assets/img/avatar4.jpg); }
+      .reviews .reseñas .opinion1 .opinion1-texto, .reviews .reseñas .opinion1 .opinion2-texto, .reviews .reseñas .opinion1 .opinion3-texto, .reviews .reseñas .opinion1 .opinion4-texto, .reviews .reseñas .opinion2 .opinion1-texto, .reviews .reseñas .opinion2 .opinion2-texto, .reviews .reseñas .opinion2 .opinion3-texto, .reviews .reseñas .opinion2 .opinion4-texto, .reviews .reseñas .opinion3 .opinion1-texto, .reviews .reseñas .opinion3 .opinion2-texto, .reviews .reseñas .opinion3 .opinion3-texto, .reviews .reseñas .opinion3 .opinion4-texto, .reviews .reseñas .opinion4 .opinion1-texto, .reviews .reseñas .opinion4 .opinion2-texto, .reviews .reseñas .opinion4 .opinion3-texto, .reviews .reseñas .opinion4 .opinion4-texto {
+        width: 480px;
+        height: 590px;
+        text-align: center; }
+        .reviews .reseñas .opinion1 .opinion1-texto h4, .reviews .reseñas .opinion1 .opinion2-texto h4, .reviews .reseñas .opinion1 .opinion3-texto h4, .reviews .reseñas .opinion1 .opinion4-texto h4, .reviews .reseñas .opinion2 .opinion1-texto h4, .reviews .reseñas .opinion2 .opinion2-texto h4, .reviews .reseñas .opinion2 .opinion3-texto h4, .reviews .reseñas .opinion2 .opinion4-texto h4, .reviews .reseñas .opinion3 .opinion1-texto h4, .reviews .reseñas .opinion3 .opinion2-texto h4, .reviews .reseñas .opinion3 .opinion3-texto h4, .reviews .reseñas .opinion3 .opinion4-texto h4, .reviews .reseñas .opinion4 .opinion1-texto h4, .reviews .reseñas .opinion4 .opinion2-texto h4, .reviews .reseñas .opinion4 .opinion3-texto h4, .reviews .reseñas .opinion4 .opinion4-texto h4 {
+          width: unset;
+          text-align: center;
+          padding: 10px 10px 5px 10px;
+          font-family: "Quicksand", sans-serif;
+          font-weight: normal;
+          font-size: 34px;
+          margin-top: 5px; }
+        .reviews .reseñas .opinion1 .opinion1-texto p, .reviews .reseñas .opinion1 .opinion2-texto p, .reviews .reseñas .opinion1 .opinion3-texto p, .reviews .reseñas .opinion1 .opinion4-texto p, .reviews .reseñas .opinion2 .opinion1-texto p, .reviews .reseñas .opinion2 .opinion2-texto p, .reviews .reseñas .opinion2 .opinion3-texto p, .reviews .reseñas .opinion2 .opinion4-texto p, .reviews .reseñas .opinion3 .opinion1-texto p, .reviews .reseñas .opinion3 .opinion2-texto p, .reviews .reseñas .opinion3 .opinion3-texto p, .reviews .reseñas .opinion3 .opinion4-texto p, .reviews .reseñas .opinion4 .opinion1-texto p, .reviews .reseñas .opinion4 .opinion2-texto p, .reviews .reseñas .opinion4 .opinion3-texto p, .reviews .reseñas .opinion4 .opinion4-texto p {
+          width: unset;
+          text-align: center;
+          padding: 5px 20px 10px 20px;
+          font-family: "Libre Baskerville", serif;
+          font-weight: normal;
+          font-size: 28px;
+          margin-bottom: 10px;
+          line-height: 2; }
+
+.material-mobile {
+  display: none; }
+
+.contacto-index {
+  background-color: #D7D2D2;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px; }
+  .contacto-index h3 {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: normal;
+    font-size: 42px; }
+  .contacto-index .caja-contacto {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; }
+    .contacto-index .caja-contacto .row1, .contacto-index .caja-contacto .row2, .contacto-index .caja-contacto .row3, .contacto-index .caja-contacto .row4 {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      align-items: center; }
+      .contacto-index .caja-contacto .row1 .name, .contacto-index .caja-contacto .row1 .name-input, .contacto-index .caja-contacto .row1 .lastname, .contacto-index .caja-contacto .row1 .lastname-input, .contacto-index .caja-contacto .row1 .mail, .contacto-index .caja-contacto .row1 .email-input, .contacto-index .caja-contacto .row1 .tel, .contacto-index .caja-contacto .row1 .tel-input, .contacto-index .caja-contacto .row1 .motivo, .contacto-index .caja-contacto .row1 .options, .contacto-index .caja-contacto .row1 .mensaje, .contacto-index .caja-contacto .row1 .mensaje-input, .contacto-index .caja-contacto .row2 .name, .contacto-index .caja-contacto .row2 .name-input, .contacto-index .caja-contacto .row2 .lastname, .contacto-index .caja-contacto .row2 .lastname-input, .contacto-index .caja-contacto .row2 .mail, .contacto-index .caja-contacto .row2 .email-input, .contacto-index .caja-contacto .row2 .tel, .contacto-index .caja-contacto .row2 .tel-input, .contacto-index .caja-contacto .row2 .motivo, .contacto-index .caja-contacto .row2 .options, .contacto-index .caja-contacto .row2 .mensaje, .contacto-index .caja-contacto .row2 .mensaje-input, .contacto-index .caja-contacto .row3 .name, .contacto-index .caja-contacto .row3 .name-input, .contacto-index .caja-contacto .row3 .lastname, .contacto-index .caja-contacto .row3 .lastname-input, .contacto-index .caja-contacto .row3 .mail, .contacto-index .caja-contacto .row3 .email-input, .contacto-index .caja-contacto .row3 .tel, .contacto-index .caja-contacto .row3 .tel-input, .contacto-index .caja-contacto .row3 .motivo, .contacto-index .caja-contacto .row3 .options, .contacto-index .caja-contacto .row3 .mensaje, .contacto-index .caja-contacto .row3 .mensaje-input, .contacto-index .caja-contacto .row4 .name, .contacto-index .caja-contacto .row4 .name-input, .contacto-index .caja-contacto .row4 .lastname, .contacto-index .caja-contacto .row4 .lastname-input, .contacto-index .caja-contacto .row4 .mail, .contacto-index .caja-contacto .row4 .email-input, .contacto-index .caja-contacto .row4 .tel, .contacto-index .caja-contacto .row4 .tel-input, .contacto-index .caja-contacto .row4 .motivo, .contacto-index .caja-contacto .row4 .options, .contacto-index .caja-contacto .row4 .mensaje, .contacto-index .caja-contacto .row4 .mensaje-input {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 5px; }
+      .contacto-index .caja-contacto .row1 .name, .contacto-index .caja-contacto .row1 .name-input, .contacto-index .caja-contacto .row1 .mail, .contacto-index .caja-contacto .row1 .email-input, .contacto-index .caja-contacto .row2 .name, .contacto-index .caja-contacto .row2 .name-input, .contacto-index .caja-contacto .row2 .mail, .contacto-index .caja-contacto .row2 .email-input, .contacto-index .caja-contacto .row3 .name, .contacto-index .caja-contacto .row3 .name-input, .contacto-index .caja-contacto .row3 .mail, .contacto-index .caja-contacto .row3 .email-input, .contacto-index .caja-contacto .row4 .name, .contacto-index .caja-contacto .row4 .name-input, .contacto-index .caja-contacto .row4 .mail, .contacto-index .caja-contacto .row4 .email-input {
+        margin-right: 5px; }
+      .contacto-index .caja-contacto .row1 .email-input, .contacto-index .caja-contacto .row1 .tel-input, .contacto-index .caja-contacto .row1 .name-input, .contacto-index .caja-contacto .row1 .lastname-input, .contacto-index .caja-contacto .row1 .options, .contacto-index .caja-contacto .row2 .email-input, .contacto-index .caja-contacto .row2 .tel-input, .contacto-index .caja-contacto .row2 .name-input, .contacto-index .caja-contacto .row2 .lastname-input, .contacto-index .caja-contacto .row2 .options, .contacto-index .caja-contacto .row3 .email-input, .contacto-index .caja-contacto .row3 .tel-input, .contacto-index .caja-contacto .row3 .name-input, .contacto-index .caja-contacto .row3 .lastname-input, .contacto-index .caja-contacto .row3 .options, .contacto-index .caja-contacto .row4 .email-input, .contacto-index .caja-contacto .row4 .tel-input, .contacto-index .caja-contacto .row4 .name-input, .contacto-index .caja-contacto .row4 .lastname-input, .contacto-index .caja-contacto .row4 .options {
+        width: 45vw;
+        height: 50px;
+        margin-bottom: 15px; }
+      .contacto-index .caja-contacto .row1 .options, .contacto-index .caja-contacto .row1 .mensaje-input, .contacto-index .caja-contacto .row2 .options, .contacto-index .caja-contacto .row2 .mensaje-input, .contacto-index .caja-contacto .row3 .options, .contacto-index .caja-contacto .row3 .mensaje-input, .contacto-index .caja-contacto .row4 .options, .contacto-index .caja-contacto .row4 .mensaje-input {
+        width: 90vw; }
+      .contacto-index .caja-contacto .row1 .mensaje-input, .contacto-index .caja-contacto .row2 .mensaje-input, .contacto-index .caja-contacto .row3 .mensaje-input, .contacto-index .caja-contacto .row4 .mensaje-input {
+        margin-bottom: 0;
+        resize: none; }
+      .contacto-index .caja-contacto .row1 .options, .contacto-index .caja-contacto .row2 .options, .contacto-index .caja-contacto .row3 .options, .contacto-index .caja-contacto .row4 .options {
+        padding: 7px; }
+      .contacto-index .caja-contacto .row1 .name-input, .contacto-index .caja-contacto .row1 .lastname-input, .contacto-index .caja-contacto .row1 .email-input, .contacto-index .caja-contacto .row1 .tel-input, .contacto-index .caja-contacto .row1 .mensaje-input, .contacto-index .caja-contacto .row2 .name-input, .contacto-index .caja-contacto .row2 .lastname-input, .contacto-index .caja-contacto .row2 .email-input, .contacto-index .caja-contacto .row2 .tel-input, .contacto-index .caja-contacto .row2 .mensaje-input, .contacto-index .caja-contacto .row3 .name-input, .contacto-index .caja-contacto .row3 .lastname-input, .contacto-index .caja-contacto .row3 .email-input, .contacto-index .caja-contacto .row3 .tel-input, .contacto-index .caja-contacto .row3 .mensaje-input, .contacto-index .caja-contacto .row4 .name-input, .contacto-index .caja-contacto .row4 .lastname-input, .contacto-index .caja-contacto .row4 .email-input, .contacto-index .caja-contacto .row4 .tel-input, .contacto-index .caja-contacto .row4 .mensaje-input {
+        padding: 5px; }
+      .contacto-index .caja-contacto .row1 .name, .contacto-index .caja-contacto .row1 .lastname, .contacto-index .caja-contacto .row1 .mail, .contacto-index .caja-contacto .row1 .tel, .contacto-index .caja-contacto .row1 .motivo, .contacto-index .caja-contacto .row1 .mensaje, .contacto-index .caja-contacto .row2 .name, .contacto-index .caja-contacto .row2 .lastname, .contacto-index .caja-contacto .row2 .mail, .contacto-index .caja-contacto .row2 .tel, .contacto-index .caja-contacto .row2 .motivo, .contacto-index .caja-contacto .row2 .mensaje, .contacto-index .caja-contacto .row3 .name, .contacto-index .caja-contacto .row3 .lastname, .contacto-index .caja-contacto .row3 .mail, .contacto-index .caja-contacto .row3 .tel, .contacto-index .caja-contacto .row3 .motivo, .contacto-index .caja-contacto .row3 .mensaje, .contacto-index .caja-contacto .row4 .name, .contacto-index .caja-contacto .row4 .lastname, .contacto-index .caja-contacto .row4 .mail, .contacto-index .caja-contacto .row4 .tel, .contacto-index .caja-contacto .row4 .motivo, .contacto-index .caja-contacto .row4 .mensaje {
+        font-family: "Libre Baskerville", serif;
+        font-weight: normal; }
+      .contacto-index .caja-contacto .row1 .name, .contacto-index .caja-contacto .row1 .lastname, .contacto-index .caja-contacto .row1 .mail, .contacto-index .caja-contacto .row1 .tel, .contacto-index .caja-contacto .row1 .motivo, .contacto-index .caja-contacto .row1 .mensaje, .contacto-index .caja-contacto .row1 .options, .contacto-index .caja-contacto .row1 .name-input, .contacto-index .caja-contacto .row1 .lastname-input, .contacto-index .caja-contacto .row1 .email-input, .contacto-index .caja-contacto .row1 .tel-input, .contacto-index .caja-contacto .row1 .mensaje-input, .contacto-index .caja-contacto .row2 .name, .contacto-index .caja-contacto .row2 .lastname, .contacto-index .caja-contacto .row2 .mail, .contacto-index .caja-contacto .row2 .tel, .contacto-index .caja-contacto .row2 .motivo, .contacto-index .caja-contacto .row2 .mensaje, .contacto-index .caja-contacto .row2 .options, .contacto-index .caja-contacto .row2 .name-input, .contacto-index .caja-contacto .row2 .lastname-input, .contacto-index .caja-contacto .row2 .email-input, .contacto-index .caja-contacto .row2 .tel-input, .contacto-index .caja-contacto .row2 .mensaje-input, .contacto-index .caja-contacto .row3 .name, .contacto-index .caja-contacto .row3 .lastname, .contacto-index .caja-contacto .row3 .mail, .contacto-index .caja-contacto .row3 .tel, .contacto-index .caja-contacto .row3 .motivo, .contacto-index .caja-contacto .row3 .mensaje, .contacto-index .caja-contacto .row3 .options, .contacto-index .caja-contacto .row3 .name-input, .contacto-index .caja-contacto .row3 .lastname-input, .contacto-index .caja-contacto .row3 .email-input, .contacto-index .caja-contacto .row3 .tel-input, .contacto-index .caja-contacto .row3 .mensaje-input, .contacto-index .caja-contacto .row4 .name, .contacto-index .caja-contacto .row4 .lastname, .contacto-index .caja-contacto .row4 .mail, .contacto-index .caja-contacto .row4 .tel, .contacto-index .caja-contacto .row4 .motivo, .contacto-index .caja-contacto .row4 .mensaje, .contacto-index .caja-contacto .row4 .options, .contacto-index .caja-contacto .row4 .name-input, .contacto-index .caja-contacto .row4 .lastname-input, .contacto-index .caja-contacto .row4 .email-input, .contacto-index .caja-contacto .row4 .tel-input, .contacto-index .caja-contacto .row4 .mensaje-input {
+        font-size: 28px; }
+
+.sobre-mi {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: repeat(3);
+  grid-template-areas: "item1 item1"
+ "item2 item4"
+ "item3 item4";
+  margin-bottom: 25px; }
+  .sobre-mi .item1 {
+    grid-area: item1;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: normal;
+    font-size: 40px; }
+  .sobre-mi .item2 {
+    grid-area: item2; }
+  .sobre-mi .item3 {
+    grid-area: item3; }
+  .sobre-mi .item2, .sobre-mi .item3 {
+    width: unset;
+    text-align: justify;
+    padding: 20px 50px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 2; }
+  .sobre-mi .letter {
+    font-size: 34px; }
+  .sobre-mi .item4 {
+    width: 950px;
+    height: unset;
+    border-radius: 200px 0px 200px 0px;
+    background-size: cover;
+    background-position: center;
+    background-position-y: 20%;
+    background-image: url(../assets/img/sobre-mi.jpg);
+    grid-area: item4;
+    display: grid;
     align-content: center;
-    padding-top: 10px;
+    margin-right: 50px; }
 
-}
+.servicios h2 {
+  width: 100%;
+  text-align: center;
+  padding: 50px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: normal;
+  font-size: 40px; }
 
-.test2 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
+.servicios p {
+  width: 100%;
+  text-align: center;
+  padding: 10px 50px 10px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: normal;
+  font-size: 50px;
+  height: auto;
+  margin-top: 10px;
+  line-height: 2; }
 
-h1 {
-    margin-left: 5px;
-    font-size: 40px;
-    font-family: 'Comic Neue', cursive;
-    color: rgb(134, 8, 10)
-}
-
-h2 {
-    margin-left: 5px;
-    font-size: 30px;
-    font-family: 'Dancing Script', cursive;
-    color: rgb(134, 8, 10)
-}
-.navbar {
-    background-color: #fff0f6;
-    border: none;
-}
-
-.navbar-brand {
-    font-family: 'Dancing Script', cursive;
-    font-size: 24px;
-    color: #d63384 !important;
-}
-
-.navbar-nav > li > a {
-    color: #d63384 !important;
-    font-family: 'Comic Neue', cursive;
-}
-
-.navbar-nav > li > a:hover {
-    color: #ad1457 !important;
-}
-
-.navbar-toggle .icon-bar {
-    background-color: #d63384;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.navBar {
-    width: auto;
-    height: auto;
-    background-color: rgb(250, 171, 120);
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    justify-content: space-around;
-    align-items: center;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-    font-size: larger;
-}
-
-.navBar li {
-    list-style-type: none;
-    list-style-position: inside;
-
-}
-
-.navBar li a {
-    text-decoration: none;
-    color: rgb(134, 8, 10)
-}
-
-.navBar li:hover {
-    transform: scale(1.2);
-}
-
-div {
-    background-color: antiquewhite;
-}
-
-.test3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    list-style: none;
-    padding-top: 20px;
-}
-test3 derechos {
-
-}
-
-/*estilos de galeria*/
-.galetor {
-    background-color: antiquewhite;
-    text-align: center;
-    color: brown;
-}
-
-.galeria {
-    background-color: antiquewhite;
-    width: 98%;
-    margin: auto;
-    list-style: none;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.galeria li {
-    margin: 5px;
-}
-
-.galeria img {
-    width: 300;
-    height: 250;
-}
-
-.modelismo {
-    display: none;
-}
-
-.modelismo:target {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
+.servicios .servicios-caja {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px; }
+  .servicios .servicios-caja h3 {
     width: 100%;
-    height: 100%;
-}
-
-.modelismo p {
-    color: rgb(241, 129, 24);
-    font-size: 30px;
     text-align: center;
-    margin: 15px;
-
-}
-
-.t1 {
-    width: 100%;
-    height: 50%;
+    padding: 50px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 36px; }
+  .servicios .servicios-caja .servicios-fotos {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    gap: 25px; }
+    .servicios .servicios-caja .servicios-fotos figure {
+      width: 500px;
+      height: 500px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+      box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+      cursor: pointer; }
+      .servicios .servicios-caja .servicios-fotos figure img {
+        width: 100%;
+        height: 100%;
+        transition: all 500ms ease-out; }
+      .servicios .servicios-caja .servicios-fotos figure .capa, .servicios .servicios-caja .servicios-fotos figure .capa2 {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #c51e00;
+        transition: all 500ms ease-out;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center; }
+      .servicios .servicios-caja .servicios-fotos figure .capa2 {
+        background: #000000; }
+      .servicios .servicios-caja .servicios-fotos figure:hover > .capa, .servicios .servicios-caja .servicios-fotos figure:hover > .capa2 {
+        opacity: 1;
+        visibility: visible; }
+      .servicios .servicios-caja .servicios-fotos figure:hover > .capa h3 {
+        margin-top: 10px; }
+      .servicios .servicios-caja .servicios-fotos figure:hover > .capa2 h3 {
+        margin-top: 150px; }
+      .servicios .servicios-caja .servicios-fotos figure .capa h3, .servicios .servicios-caja .servicios-fotos figure .capa2 h3 {
+        color: #000000;
+        font-family: "Quicksand", sans-serif;
+        font-weight: bold;
+        transition: all 500ms ease-out; }
+      .servicios .servicios-caja .servicios-fotos figure .capa p {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        font-family: "Libre Baskerville", serif;
+        font-weight: normal;
+        font-size: 26px;
+        color: #000000;
+        line-height: 2;
+        max-width: 450px;
+        margin: auto;
+        transition: all 500ms ease-out;
+        margin-top: 0; }
+      .servicios .servicios-caja .servicios-fotos figure .capa2 h3 {
+        color: #c51e00;
+        padding: 50px; }
+
+
+
+/* Estilos del carrusel */
+.carousel-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.t1 a {
-    color: white;
-    font-size: 40px;
-    text-decoration: none;
-    margin: 0 10px;
+.carousel {
+  position: relative;
+  width: 100%;
 }
 
-.imagen a:nth-child(2) {
-    margin: 0;
-    height: 100%;
-    flex-shrink: 2;
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
 }
 
-.t1 img {
-    width: 500px;
-    height: 100%;
-    max-width: 100%;
-    border: 7px solid white;
-    box-sizing: border-box;
+.item {
+  min-width: 100%;
+  position: relative;
+  display: none;
 }
 
-.cerrar {
-    display: block;
-    background-color: white;
-    width: 25px;
-    height: 25px;
-    margin: auto;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    padding: 5px;
-    border-radius: 50%;
-    line-height: 25px;
+.item.active {
+  display: block;
 }
 
-/*contacto.html*/
+.item img {
+  width: 100%;
+  height: 500px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsión */
+  display: block;
+}
+.Titulo_galeria{
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  font-size: 30px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: lighter !important;
+  unicode-bidi: isolate;
+}
+.Titulo_galeria .Galeria_texto{
+  font-family: "Quicksand", sans-serif;
+  font-weight: lighter !important;
+  unicode-bidi: isolate;
+}
+  
+
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 40px;
+  padding top: 15px;
+  text-align: center;
+}
+
+.carousel-caption h3 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  margin: 5px 0 0;
+  font-size: 1em;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2em;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/* Indicadores (puntos) */
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.carousel-indicator.active {
+  background: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .contacto {
+  background-color: #D7D2D2;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center; }
+  .contacto h2 {
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: normal;
+    font-size: 40px; }
+  .contacto .fb-contacto, .contacto .ig-contacto, .contacto .icono-mail {
+    width: 50px;
+    height: 50px; }
+  .contacto .mail-contacto {
     display: flex;
-    align-items: center;
+    flex-flow: row;
     justify-content: center;
-}
+    align-items: center; }
+    .contacto .mail-contacto p {
+      padding: 15px;
+      font-size: 28px; }
+  .contacto .linea-contacto {
+    background-color: #000000;
+    width: 45vw;
+    height: 3px;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .contacto p {
+    width: 100%;
+    text-align: justify;
+    padding: 50px 100px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: normal;
+    font-size: 28px;
+    height: auto;
+    line-height: 2; }
+  .contacto .caja-contacto2 {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 40px; }
+    .contacto .caja-contacto2 .row1, .contacto .caja-contacto2 .row2, .contacto .caja-contacto2 .row3, .contacto .caja-contacto2 .row4 {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      align-items: center; }
+      .contacto .caja-contacto2 .row1 .name, .contacto .caja-contacto2 .row1 .name-input, .contacto .caja-contacto2 .row1 .lastname, .contacto .caja-contacto2 .row1 .lastname-input, .contacto .caja-contacto2 .row1 .mail, .contacto .caja-contacto2 .row1 .email-input, .contacto .caja-contacto2 .row1 .tel, .contacto .caja-contacto2 .row1 .tel-input, .contacto .caja-contacto2 .row1 .motivo, .contacto .caja-contacto2 .row1 .options, .contacto .caja-contacto2 .row1 .mensaje, .contacto .caja-contacto2 .row1 .mensaje-input, .contacto .caja-contacto2 .row2 .name, .contacto .caja-contacto2 .row2 .name-input, .contacto .caja-contacto2 .row2 .lastname, .contacto .caja-contacto2 .row2 .lastname-input, .contacto .caja-contacto2 .row2 .mail, .contacto .caja-contacto2 .row2 .email-input, .contacto .caja-contacto2 .row2 .tel, .contacto .caja-contacto2 .row2 .tel-input, .contacto .caja-contacto2 .row2 .motivo, .contacto .caja-contacto2 .row2 .options, .contacto .caja-contacto2 .row2 .mensaje, .contacto .caja-contacto2 .row2 .mensaje-input, .contacto .caja-contacto2 .row3 .name, .contacto .caja-contacto2 .row3 .name-input, .contacto .caja-contacto2 .row3 .lastname, .contacto .caja-contacto2 .row3 .lastname-input, .contacto .caja-contacto2 .row3 .mail, .contacto .caja-contacto2 .row3 .email-input, .contacto .caja-contacto2 .row3 .tel, .contacto .caja-contacto2 .row3 .tel-input, .contacto .caja-contacto2 .row3 .motivo, .contacto .caja-contacto2 .row3 .options, .contacto .caja-contacto2 .row3 .mensaje, .contacto .caja-contacto2 .row3 .mensaje-input, .contacto .caja-contacto2 .row4 .name, .contacto .caja-contacto2 .row4 .name-input, .contacto .caja-contacto2 .row4 .lastname, .contacto .caja-contacto2 .row4 .lastname-input, .contacto .caja-contacto2 .row4 .mail, .contacto .caja-contacto2 .row4 .email-input, .contacto .caja-contacto2 .row4 .tel, .contacto .caja-contacto2 .row4 .tel-input, .contacto .caja-contacto2 .row4 .motivo, .contacto .caja-contacto2 .row4 .options, .contacto .caja-contacto2 .row4 .mensaje, .contacto .caja-contacto2 .row4 .mensaje-input {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 5px; }
+      .contacto .caja-contacto2 .row1 .name, .contacto .caja-contacto2 .row1 .name-input, .contacto .caja-contacto2 .row1 .mail, .contacto .caja-contacto2 .row1 .email-input, .contacto .caja-contacto2 .row2 .name, .contacto .caja-contacto2 .row2 .name-input, .contacto .caja-contacto2 .row2 .mail, .contacto .caja-contacto2 .row2 .email-input, .contacto .caja-contacto2 .row3 .name, .contacto .caja-contacto2 .row3 .name-input, .contacto .caja-contacto2 .row3 .mail, .contacto .caja-contacto2 .row3 .email-input, .contacto .caja-contacto2 .row4 .name, .contacto .caja-contacto2 .row4 .name-input, .contacto .caja-contacto2 .row4 .mail, .contacto .caja-contacto2 .row4 .email-input {
+        margin-right: 5px; }
+      .contacto .caja-contacto2 .row1 .email-input, .contacto .caja-contacto2 .row1 .tel-input, .contacto .caja-contacto2 .row1 .name-input, .contacto .caja-contacto2 .row1 .lastname-input, .contacto .caja-contacto2 .row1 .options, .contacto .caja-contacto2 .row2 .email-input, .contacto .caja-contacto2 .row2 .tel-input, .contacto .caja-contacto2 .row2 .name-input, .contacto .caja-contacto2 .row2 .lastname-input, .contacto .caja-contacto2 .row2 .options, .contacto .caja-contacto2 .row3 .email-input, .contacto .caja-contacto2 .row3 .tel-input, .contacto .caja-contacto2 .row3 .name-input, .contacto .caja-contacto2 .row3 .lastname-input, .contacto .caja-contacto2 .row3 .options, .contacto .caja-contacto2 .row4 .email-input, .contacto .caja-contacto2 .row4 .tel-input, .contacto .caja-contacto2 .row4 .name-input, .contacto .caja-contacto2 .row4 .lastname-input, .contacto .caja-contacto2 .row4 .options {
+        width: 45vw;
+        height: 50px;
+        margin-bottom: 15px; }
+      .contacto .caja-contacto2 .row1 .options, .contacto .caja-contacto2 .row1 .mensaje-input, .contacto .caja-contacto2 .row2 .options, .contacto .caja-contacto2 .row2 .mensaje-input, .contacto .caja-contacto2 .row3 .options, .contacto .caja-contacto2 .row3 .mensaje-input, .contacto .caja-contacto2 .row4 .options, .contacto .caja-contacto2 .row4 .mensaje-input {
+        width: 90vw; }
+      .contacto .caja-contacto2 .row1 .mensaje-input, .contacto .caja-contacto2 .row2 .mensaje-input, .contacto .caja-contacto2 .row3 .mensaje-input, .contacto .caja-contacto2 .row4 .mensaje-input {
+        margin-bottom: 0;
+        resize: none; }
+      .contacto .caja-contacto2 .row1 .options, .contacto .caja-contacto2 .row2 .options, .contacto .caja-contacto2 .row3 .options, .contacto .caja-contacto2 .row4 .options {
+        padding: 7px; }
+      .contacto .caja-contacto2 .row1 .name-input, .contacto .caja-contacto2 .row1 .lastname-input, .contacto .caja-contacto2 .row1 .email-input, .contacto .caja-contacto2 .row1 .tel-input, .contacto .caja-contacto2 .row1 .mensaje-input, .contacto .caja-contacto2 .row2 .name-input, .contacto .caja-contacto2 .row2 .lastname-input, .contacto .caja-contacto2 .row2 .email-input, .contacto .caja-contacto2 .row2 .tel-input, .contacto .caja-contacto2 .row2 .mensaje-input, .contacto .caja-contacto2 .row3 .name-input, .contacto .caja-contacto2 .row3 .lastname-input, .contacto .caja-contacto2 .row3 .email-input, .contacto .caja-contacto2 .row3 .tel-input, .contacto .caja-contacto2 .row3 .mensaje-input, .contacto .caja-contacto2 .row4 .name-input, .contacto .caja-contacto2 .row4 .lastname-input, .contacto .caja-contacto2 .row4 .email-input, .contacto .caja-contacto2 .row4 .tel-input, .contacto .caja-contacto2 .row4 .mensaje-input {
+        padding: 5px; }
+      .contacto .caja-contacto2 .row1 .name, .contacto .caja-contacto2 .row1 .lastname, .contacto .caja-contacto2 .row1 .mail, .contacto .caja-contacto2 .row1 .tel, .contacto .caja-contacto2 .row1 .motivo, .contacto .caja-contacto2 .row1 .mensaje, .contacto .caja-contacto2 .row2 .name, .contacto .caja-contacto2 .row2 .lastname, .contacto .caja-contacto2 .row2 .mail, .contacto .caja-contacto2 .row2 .tel, .contacto .caja-contacto2 .row2 .motivo, .contacto .caja-contacto2 .row2 .mensaje, .contacto .caja-contacto2 .row3 .name, .contacto .caja-contacto2 .row3 .lastname, .contacto .caja-contacto2 .row3 .mail, .contacto .caja-contacto2 .row3 .tel, .contacto .caja-contacto2 .row3 .motivo, .contacto .caja-contacto2 .row3 .mensaje, .contacto .caja-contacto2 .row4 .name, .contacto .caja-contacto2 .row4 .lastname, .contacto .caja-contacto2 .row4 .mail, .contacto .caja-contacto2 .row4 .tel, .contacto .caja-contacto2 .row4 .motivo, .contacto .caja-contacto2 .row4 .mensaje {
+        font-family: "Libre Baskerville", serif;
+        font-weight: normal; }
+      .contacto .caja-contacto2 .row1 .name, .contacto .caja-contacto2 .row1 .lastname, .contacto .caja-contacto2 .row1 .mail, .contacto .caja-contacto2 .row1 .tel, .contacto .caja-contacto2 .row1 .motivo, .contacto .caja-contacto2 .row1 .mensaje, .contacto .caja-contacto2 .row1 .options, .contacto .caja-contacto2 .row1 .name-input, .contacto .caja-contacto2 .row1 .lastname-input, .contacto .caja-contacto2 .row1 .email-input, .contacto .caja-contacto2 .row1 .tel-input, .contacto .caja-contacto2 .row1 .mensaje-input, .contacto .caja-contacto2 .row2 .name, .contacto .caja-contacto2 .row2 .lastname, .contacto .caja-contacto2 .row2 .mail, .contacto .caja-contacto2 .row2 .tel, .contacto .caja-contacto2 .row2 .motivo, .contacto .caja-contacto2 .row2 .mensaje, .contacto .caja-contacto2 .row2 .options, .contacto .caja-contacto2 .row2 .name-input, .contacto .caja-contacto2 .row2 .lastname-input, .contacto .caja-contacto2 .row2 .email-input, .contacto .caja-contacto2 .row2 .tel-input, .contacto .caja-contacto2 .row2 .mensaje-input, .contacto .caja-contacto2 .row3 .name, .contacto .caja-contacto2 .row3 .lastname, .contacto .caja-contacto2 .row3 .mail, .contacto .caja-contacto2 .row3 .tel, .contacto .caja-contacto2 .row3 .motivo, .contacto .caja-contacto2 .row3 .mensaje, .contacto .caja-contacto2 .row3 .options, .contacto .caja-contacto2 .row3 .name-input, .contacto .caja-contacto2 .row3 .lastname-input, .contacto .caja-contacto2 .row3 .email-input, .contacto .caja-contacto2 .row3 .tel-input, .contacto .caja-contacto2 .row3 .mensaje-input, .contacto .caja-contacto2 .row4 .name, .contacto .caja-contacto2 .row4 .lastname, .contacto .caja-contacto2 .row4 .mail, .contacto .caja-contacto2 .row4 .tel, .contacto .caja-contacto2 .row4 .motivo, .contacto .caja-contacto2 .row4 .mensaje, .contacto .caja-contacto2 .row4 .options, .contacto .caja-contacto2 .row4 .name-input, .contacto .caja-contacto2 .row4 .lastname-input, .contacto .caja-contacto2 .row4 .email-input, .contacto .caja-contacto2 .row4 .tel-input, .contacto .caja-contacto2 .row4 .mensaje-input {
+        font-size: 28px; }
 
-/*keyframes*/
-.galeria li {
-    -webkit-animation: flip-in-ver-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: flip-in-ver-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-.test2{
-    -webkit-animation: flip-in-ver-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: flip-in-ver-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-@-webkit-keyframes flip-in-ver-right {
-    0% {
-        -webkit-transform: rotateY(-80deg);
-        transform: rotateY(-80deg);
-        opacity: 0;
-    }
+footer {
+  padding-bottom: 15px;
+  background-color: #000000; }
+  footer .redes-footer {
+    width: 100%;
+    height: 100px;
+    padding-top: 20px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; }
+    footer .redes-footer .fb-footer, footer .redes-footer .ig-footer {
+      width: 70px;
+      height: 70px; }
+    footer .redes-footer .lineas {
+      background-color: #FFFFFF;
+      width: 35vw;
+      height: 1px; }
+  footer .logo-footer {
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px; }
+  footer .footer-texto h2, footer .footer-texto h3 {
+    width: 100%;
+    text-align: center;
+    padding: unset;
+    font-family: "Libre Baskerville", serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 1.5;
+    margin-bottom: 10px; }
 
-    100% {
-        -webkit-transform: rotateY(0);
-        transform: rotateY(0);
-        opacity: 1;
-    }
-}
+@media (max-width: 1999px) {
+  .container {
+    grid-template-rows: 100px 1fr 0.05fr; }
+    .container .menu-mobile {
+      display: none; }
+    .container .menu-desktop {
+      grid-template-rows: 100px; }
+      .container .menu-desktop .logo .foto-logo {
+        width: 180PX; }
+      .container .menu-desktop nav .navbar {
+        gap: 50px; }
+        .container .menu-desktop nav .navbar li a {
+          font-size: 24px; }
+      .container .menu-desktop .redes .fb, .container .menu-desktop .redes .ig {
+        width: 40px;
+        height: 40px; }
+    .container .banner {
+      height: 750px; }
+    .container .company .mision img, .container .company .vision img, .container .company .valores img {
+      width: 250px;
+      height: 250px; }
+    .container .company .mision .about1, .container .company .mision .about2, .container .company .mision .about3, .container .company .vision .about1, .container .company .vision .about2, .container .company .vision .about3, .container .company .valores .about1, .container .company .valores .about2, .container .company .valores .about3 {
+      width: 380px;
+      height: 380px; }
+      .container .company .mision .about1 h2, .container .company .mision .about2 h2, .container .company .mision .about3 h2, .container .company .vision .about1 h2, .container .company .vision .about2 h2, .container .company .vision .about3 h2, .container .company .valores .about1 h2, .container .company .valores .about2 h2, .container .company .valores .about3 h2 {
+        font-size: 28px; }
+      .container .company .mision .about1 p, .container .company .mision .about2 p, .container .company .mision .about3 p, .container .company .vision .about1 p, .container .company .vision .about2 p, .container .company .vision .about3 p, .container .company .valores .about1 p, .container .company .valores .about2 p, .container .company .valores .about3 p {
+        font-size: 22px;
+        line-height: 1.5;
+        padding: 0px 10px; }
+    .container .destacados h3 {
+      font-size: 28px; }
+    .container .destacados .curso1, .container .destacados .curso2 {
+      width: 100%;
+      height: 300px; }
+      .container .destacados .curso1 .foto1, .container .destacados .curso2 .foto1 {
+        width: 300px;
+        height: 300px; }
+      .container .destacados .curso1 .curso1-texto, .container .destacados .curso2 .curso1-texto {
+        width: 60%;
+        height: 300px; }
+        .container .destacados .curso1 .curso1-texto h4, .container .destacados .curso2 .curso1-texto h4 {
+          font-size: 26px; }
+        .container .destacados .curso1 .curso1-texto p, .container .destacados .curso2 .curso1-texto p {
+          font-size: 20px; }
+      .container .destacados .curso1 .foto2, .container .destacados .curso2 .foto2 {
+        width: 300px;
+        height: 300px; }
+      .container .destacados .curso1 .curso2-texto, .container .destacados .curso2 .curso2-texto {
+        width: 60%;
+        height: 300px; }
+        .container .destacados .curso1 .curso2-texto h4, .container .destacados .curso2 .curso2-texto h4 {
+          font-size: 26px; }
+        .container .destacados .curso1 .curso2-texto p, .container .destacados .curso2 .curso2-texto p {
+          font-size: 20px; }
+    .container .reviews h3 {
+      padding: 50px;
+      font-size: 42px; }
+    .container .reviews .reseñas .opinion1 .op1, .container .reviews .reseñas .opinion1 .op2, .container .reviews .reseñas .opinion1 .op3, .container .reviews .reseñas .opinion1 .op4, .container .reviews .reseñas .opinion2 .op1, .container .reviews .reseñas .opinion2 .op2, .container .reviews .reseñas .opinion2 .op3, .container .reviews .reseñas .opinion2 .op4, .container .reviews .reseñas .opinion3 .op1, .container .reviews .reseñas .opinion3 .op2, .container .reviews .reseñas .opinion3 .op3, .container .reviews .reseñas .opinion3 .op4, .container .reviews .reseñas .opinion4 .op1, .container .reviews .reseñas .opinion4 .op2, .container .reviews .reseñas .opinion4 .op3, .container .reviews .reseñas .opinion4 .op4 {
+      width: 250px;
+      height: 250px; }
+    .container .reviews .reseñas .opinion1 .opinion1-texto, .container .reviews .reseñas .opinion1 .opinion2-texto, .container .reviews .reseñas .opinion1 .opinion3-texto, .container .reviews .reseñas .opinion1 .opinion4-texto, .container .reviews .reseñas .opinion2 .opinion1-texto, .container .reviews .reseñas .opinion2 .opinion2-texto, .container .reviews .reseñas .opinion2 .opinion3-texto, .container .reviews .reseñas .opinion2 .opinion4-texto, .container .reviews .reseñas .opinion3 .opinion1-texto, .container .reviews .reseñas .opinion3 .opinion2-texto, .container .reviews .reseñas .opinion3 .opinion3-texto, .container .reviews .reseñas .opinion3 .opinion4-texto, .container .reviews .reseñas .opinion4 .opinion1-texto, .container .reviews .reseñas .opinion4 .opinion2-texto, .container .reviews .reseñas .opinion4 .opinion3-texto, .container .reviews .reseñas .opinion4 .opinion4-texto {
+      width: 300px;
+      height: 405px; }
+      .container .reviews .reseñas .opinion1 .opinion1-texto h4, .container .reviews .reseñas .opinion1 .opinion2-texto h4, .container .reviews .reseñas .opinion1 .opinion3-texto h4, .container .reviews .reseñas .opinion1 .opinion4-texto h4, .container .reviews .reseñas .opinion2 .opinion1-texto h4, .container .reviews .reseñas .opinion2 .opinion2-texto h4, .container .reviews .reseñas .opinion2 .opinion3-texto h4, .container .reviews .reseñas .opinion2 .opinion4-texto h4, .container .reviews .reseñas .opinion3 .opinion1-texto h4, .container .reviews .reseñas .opinion3 .opinion2-texto h4, .container .reviews .reseñas .opinion3 .opinion3-texto h4, .container .reviews .reseñas .opinion3 .opinion4-texto h4, .container .reviews .reseñas .opinion4 .opinion1-texto h4, .container .reviews .reseñas .opinion4 .opinion2-texto h4, .container .reviews .reseñas .opinion4 .opinion3-texto h4, .container .reviews .reseñas .opinion4 .opinion4-texto h4 {
+        font-size: 26px; }
+      .container .reviews .reseñas .opinion1 .opinion1-texto p, .container .reviews .reseñas .opinion1 .opinion2-texto p, .container .reviews .reseñas .opinion1 .opinion3-texto p, .container .reviews .reseñas .opinion1 .opinion4-texto p, .container .reviews .reseñas .opinion2 .opinion1-texto p, .container .reviews .reseñas .opinion2 .opinion2-texto p, .container .reviews .reseñas .opinion2 .opinion3-texto p, .container .reviews .reseñas .opinion2 .opinion4-texto p, .container .reviews .reseñas .opinion3 .opinion1-texto p, .container .reviews .reseñas .opinion3 .opinion2-texto p, .container .reviews .reseñas .opinion3 .opinion3-texto p, .container .reviews .reseñas .opinion3 .opinion4-texto p, .container .reviews .reseñas .opinion4 .opinion1-texto p, .container .reviews .reseñas .opinion4 .opinion2-texto p, .container .reviews .reseñas .opinion4 .opinion3-texto p, .container .reviews .reseñas .opinion4 .opinion4-texto p {
+        padding: 10px 20px;
+        font-size: 20px;
+        line-height: 1.5; }
+    .container .contacto-index h3 {
+      padding: 50px;
+      font-size: 50px; }
+    .container .contacto-index .caja-contacto .row1 .email-input, .container .contacto-index .caja-contacto .row1 .tel-input, .container .contacto-index .caja-contacto .row1 .name-input, .container .contacto-index .caja-contacto .row1 .lastname-input, .container .contacto-index .caja-contacto .row1 .options, .container .contacto-index .caja-contacto .row2 .email-input, .container .contacto-index .caja-contacto .row2 .tel-input, .container .contacto-index .caja-contacto .row2 .name-input, .container .contacto-index .caja-contacto .row2 .lastname-input, .container .contacto-index .caja-contacto .row2 .options, .container .contacto-index .caja-contacto .row3 .email-input, .container .contacto-index .caja-contacto .row3 .tel-input, .container .contacto-index .caja-contacto .row3 .name-input, .container .contacto-index .caja-contacto .row3 .lastname-input, .container .contacto-index .caja-contacto .row3 .options, .container .contacto-index .caja-contacto .row4 .email-input, .container .contacto-index .caja-contacto .row4 .tel-input, .container .contacto-index .caja-contacto .row4 .name-input, .container .contacto-index .caja-contacto .row4 .lastname-input, .container .contacto-index .caja-contacto .row4 .options {
+      height: 40px; }
+    .container .contacto-index .caja-contacto .row1 .name, .container .contacto-index .caja-contacto .row1 .lastname, .container .contacto-index .caja-contacto .row1 .mail, .container .contacto-index .caja-contacto .row1 .tel, .container .contacto-index .caja-contacto .row1 .motivo, .container .contacto-index .caja-contacto .row1 .mensaje, .container .contacto-index .caja-contacto .row1 .options, .container .contacto-index .caja-contacto .row1 .name-input, .container .contacto-index .caja-contacto .row1 .lastname-input, .container .contacto-index .caja-contacto .row1 .email-input, .container .contacto-index .caja-contacto .row1 .tel-input, .container .contacto-index .caja-contacto .row1 .mensaje-input, .container .contacto-index .caja-contacto .row2 .name, .container .contacto-index .caja-contacto .row2 .lastname, .container .contacto-index .caja-contacto .row2 .mail, .container .contacto-index .caja-contacto .row2 .tel, .container .contacto-index .caja-contacto .row2 .motivo, .container .contacto-index .caja-contacto .row2 .mensaje, .container .contacto-index .caja-contacto .row2 .options, .container .contacto-index .caja-contacto .row2 .name-input, .container .contacto-index .caja-contacto .row2 .lastname-input, .container .contacto-index .caja-contacto .row2 .email-input, .container .contacto-index .caja-contacto .row2 .tel-input, .container .contacto-index .caja-contacto .row2 .mensaje-input, .container .contacto-index .caja-contacto .row3 .name, .container .contacto-index .caja-contacto .row3 .lastname, .container .contacto-index .caja-contacto .row3 .mail, .container .contacto-index .caja-contacto .row3 .tel, .container .contacto-index .caja-contacto .row3 .motivo, .container .contacto-index .caja-contacto .row3 .mensaje, .container .contacto-index .caja-contacto .row3 .options, .container .contacto-index .caja-contacto .row3 .name-input, .container .contacto-index .caja-contacto .row3 .lastname-input, .container .contacto-index .caja-contacto .row3 .email-input, .container .contacto-index .caja-contacto .row3 .tel-input, .container .contacto-index .caja-contacto .row3 .mensaje-input, .container .contacto-index .caja-contacto .row4 .name, .container .contacto-index .caja-contacto .row4 .lastname, .container .contacto-index .caja-contacto .row4 .mail, .container .contacto-index .caja-contacto .row4 .tel, .container .contacto-index .caja-contacto .row4 .motivo, .container .contacto-index .caja-contacto .row4 .mensaje, .container .contacto-index .caja-contacto .row4 .options, .container .contacto-index .caja-contacto .row4 .name-input, .container .contacto-index .caja-contacto .row4 .lastname-input, .container .contacto-index .caja-contacto .row4 .email-input, .container .contacto-index .caja-contacto .row4 .tel-input, .container .contacto-index .caja-contacto .row4 .mensaje-input {
+      font-size: 20px; }
+    .container .contacto-index .caja-contacto .btn-input {
+      font-size: 20px; }
+    .container .sobre-mi .item1 {
+      font-size: 32px; }
+    .container .sobre-mi .item2, .container .sobre-mi .item3 {
+      font-size: 16px; }
+    .container .sobre-mi .letter {
+      font-size: 28px; }
+    .container .sobre-mi .item4 {
+      width: 600px; }
+    .container .servicios h2 {
+      font-size: 32px; }
+    .container .servicios p {
+      padding: 10px 100px 10px;
+      font-size: 30px; }
+    .container .servicios .servicios-caja {
+      margin-bottom: 50px; }
+      .container .servicios .servicios-caja h3 {
+        font-size: 26px; }
+      .container .servicios .servicios-caja .servicios-fotos figure {
+        width: 400px;
+        height: 400px; }
+        .container .servicios .servicios-caja .servicios-fotos figure:hover > .capa h3 {
+          margin-top: 30px; }
+        .container .servicios .servicios-caja .servicios-fotos figure:hover > .capa2 h3 {
+          margin-top: 90px; }
+        .container .servicios .servicios-caja .servicios-fotos figure .capa h3 {
+          font-size: 32px;
+          padding: 25px 50px; }
+        .container .servicios .servicios-caja .servicios-fotos figure .capa p {
+          font-size: 20px;
+          max-width: 350px; }
+        .container .servicios .servicios-caja .servicios-fotos figure .capa2 h3 {
+          font-size: 32px; }
+    .container .para-vos h2 {
+      font-size: 32px; }
+    .container .para-vos p {
+      padding: 10px 100px 50px;
+      font-size: 16px; }
+    .container .para-vos .videos .video {
+      width: 400px; }
+    .container .galeria h2 {
+      font-size: 32px; }
+    .container .galeria .fotos-galeria .img1, .container .galeria .fotos-galeria .img2, .container .galeria .fotos-galeria .img3, .container .galeria .fotos-galeria .img4, .container .galeria .fotos-galeria .img5, .container .galeria .fotos-galeria .img6, .container .galeria .fotos-galeria .img7, .container .galeria .fotos-galeria .img8, .container .galeria .fotos-galeria .img9, .container .galeria .fotos-galeria .img10, .container .galeria .fotos-galeria .img11, .container .galeria .fotos-galeria .img12 {
+      width: 450px;
+      height: 650px; }
+    .container .contacto h2 {
+      font-size: 32px; }
+    .container .contacto .fb-contacto, .container .contacto .ig-contacto, .container .contacto .icono-mail {
+      width: 40px;
+      height: 40px; }
+    .container .contacto .mail-contacto p {
+      padding: 20px 10px;
+      font-size: 20px; }
+    .container .contacto p {
+      padding: 10px 70px;
+      font-size: 16px; }
+    .container .contacto .caja-contacto2 .row1 .email-input, .container .contacto .caja-contacto2 .row1 .tel-input, .container .contacto .caja-contacto2 .row1 .name-input, .container .contacto .caja-contacto2 .row1 .lastname-input, .container .contacto .caja-contacto2 .row1 .options, .container .contacto .caja-contacto2 .row2 .email-input, .container .contacto .caja-contacto2 .row2 .tel-input, .container .contacto .caja-contacto2 .row2 .name-input, .container .contacto .caja-contacto2 .row2 .lastname-input, .container .contacto .caja-contacto2 .row2 .options, .container .contacto .caja-contacto2 .row3 .email-input, .container .contacto .caja-contacto2 .row3 .tel-input, .container .contacto .caja-contacto2 .row3 .name-input, .container .contacto .caja-contacto2 .row3 .lastname-input, .container .contacto .caja-contacto2 .row3 .options, .container .contacto .caja-contacto2 .row4 .email-input, .container .contacto .caja-contacto2 .row4 .tel-input, .container .contacto .caja-contacto2 .row4 .name-input, .container .contacto .caja-contacto2 .row4 .lastname-input, .container .contacto .caja-contacto2 .row4 .options {
+      height: 40px; }
+    .container .contacto .caja-contacto2 .row1 .name-input, .container .contacto .caja-contacto2 .row1 .lastname-input, .container .contacto .caja-contacto2 .row1 .email-input, .container .contacto .caja-contacto2 .row1 .tel-input, .container .contacto .caja-contacto2 .row1 .mensaje-input, .container .contacto .caja-contacto2 .row2 .name-input, .container .contacto .caja-contacto2 .row2 .lastname-input, .container .contacto .caja-contacto2 .row2 .email-input, .container .contacto .caja-contacto2 .row2 .tel-input, .container .contacto .caja-contacto2 .row2 .mensaje-input, .container .contacto .caja-contacto2 .row3 .name-input, .container .contacto .caja-contacto2 .row3 .lastname-input, .container .contacto .caja-contacto2 .row3 .email-input, .container .contacto .caja-contacto2 .row3 .tel-input, .container .contacto .caja-contacto2 .row3 .mensaje-input, .container .contacto .caja-contacto2 .row4 .name-input, .container .contacto .caja-contacto2 .row4 .lastname-input, .container .contacto .caja-contacto2 .row4 .email-input, .container .contacto .caja-contacto2 .row4 .tel-input, .container .contacto .caja-contacto2 .row4 .mensaje-input {
+      padding: 8px; }
+    .container .contacto .caja-contacto2 .row1 .name, .container .contacto .caja-contacto2 .row1 .lastname, .container .contacto .caja-contacto2 .row1 .mail, .container .contacto .caja-contacto2 .row1 .tel, .container .contacto .caja-contacto2 .row1 .motivo, .container .contacto .caja-contacto2 .row1 .mensaje, .container .contacto .caja-contacto2 .row1 .options, .container .contacto .caja-contacto2 .row1 .name-input, .container .contacto .caja-contacto2 .row1 .lastname-input, .container .contacto .caja-contacto2 .row1 .email-input, .container .contacto .caja-contacto2 .row1 .tel-input, .container .contacto .caja-contacto2 .row1 .mensaje-input, .container .contacto .caja-contacto2 .row2 .name, .container .contacto .caja-contacto2 .row2 .lastname, .container .contacto .caja-contacto2 .row2 .mail, .container .contacto .caja-contacto2 .row2 .tel, .container .contacto .caja-contacto2 .row2 .motivo, .container .contacto .caja-contacto2 .row2 .mensaje, .container .contacto .caja-contacto2 .row2 .options, .container .contacto .caja-contacto2 .row2 .name-input, .container .contacto .caja-contacto2 .row2 .lastname-input, .container .contacto .caja-contacto2 .row2 .email-input, .container .contacto .caja-contacto2 .row2 .tel-input, .container .contacto .caja-contacto2 .row2 .mensaje-input, .container .contacto .caja-contacto2 .row3 .name, .container .contacto .caja-contacto2 .row3 .lastname, .container .contacto .caja-contacto2 .row3 .mail, .container .contacto .caja-contacto2 .row3 .tel, .container .contacto .caja-contacto2 .row3 .motivo, .container .contacto .caja-contacto2 .row3 .mensaje, .container .contacto .caja-contacto2 .row3 .options, .container .contacto .caja-contacto2 .row3 .name-input, .container .contacto .caja-contacto2 .row3 .lastname-input, .container .contacto .caja-contacto2 .row3 .email-input, .container .contacto .caja-contacto2 .row3 .tel-input, .container .contacto .caja-contacto2 .row3 .mensaje-input, .container .contacto .caja-contacto2 .row4 .name, .container .contacto .caja-contacto2 .row4 .lastname, .container .contacto .caja-contacto2 .row4 .mail, .container .contacto .caja-contacto2 .row4 .tel, .container .contacto .caja-contacto2 .row4 .motivo, .container .contacto .caja-contacto2 .row4 .mensaje, .container .contacto .caja-contacto2 .row4 .options, .container .contacto .caja-contacto2 .row4 .name-input, .container .contacto .caja-contacto2 .row4 .lastname-input, .container .contacto .caja-contacto2 .row4 .email-input, .container .contacto .caja-contacto2 .row4 .tel-input, .container .contacto .caja-contacto2 .row4 .mensaje-input {
+      font-size: 20px; }
+    .container .contacto .caja-contacto2 .btn-input {
+      font-size: 20px; } }
 
-@keyframes flip-in-ver-right {
-    0% {
-        -webkit-transform: rotateY(-80deg);
-        transform: rotateY(-80deg);
-        opacity: 0;
-    }
+@media (max-width: 1439px) {
+  .container {
+    grid-template-rows: 80px 1fr 0.05fr; }
+    .container .menu-mobile {
+      display: none; }
+    .container .menu-desktop {
+      grid-template-rows: 80px; }
+      .container .menu-desktop .logo {
+        align-items: flex-end; }
+        .container .menu-desktop .logo .foto-logo {
+          width: 150px;
+          height: 80px;}
+      .container .menu-desktop nav .navbar {
+        gap: 30px; }
+        .container .menu-desktop nav .navbar li a {
+          font-size: 18px; }
+      .container .menu-desktop .redes .fb, .container .menu-desktop .redes .ig {
+        width: 30px;
+        height: 30px; }
+    .container .banner {
+      height: 550px; }
+    .container .company .mision img, .container .company .vision img, .container .company .valores img {
+      width: 150px;
+      height: 150px; }
+    .container .company .mision .about1, .container .company .mision .about2, .container .company .mision .about3, .container .company .vision .about1, .container .company .vision .about2, .container .company .vision .about3, .container .company .valores .about1, .container .company .valores .about2, .container .company .valores .about3 {
+      width: 350px;
+      height: 280px; }
+      .container .company .mision .about1 h2, .container .company .mision .about2 h2, .container .company .mision .about3 h2, .container .company .vision .about1 h2, .container .company .vision .about2 h2, .container .company .vision .about3 h2, .container .company .valores .about1 h2, .container .company .valores .about2 h2, .container .company .valores .about3 h2 {
+        padding: 10px;
+        font-size: 20px; }
+      .container .company .mision .about1 p, .container .company .mision .about2 p, .container .company .mision .about3 p, .container .company .vision .about1 p, .container .company .vision .about2 p, .container .company .vision .about3 p, .container .company .valores .about1 p, .container .company .valores .about2 p, .container .company .valores .about3 p {
+        padding: 10px 20px 10px 20px;
+        font-size: 14px;
+        line-height: 2; }
+    .container .destacados h3 {
+      padding: 30px;
+      font-size: 24px; }
+    .container .destacados .curso1, .container .destacados .curso2 {
+      height: 200px;
+      margin: 20px 0px; }
+      .container .destacados .curso1 .foto1, .container .destacados .curso2 .foto1 {
+        width: 200px;
+        height: 200px; }
+      .container .destacados .curso1 .curso1-texto, .container .destacados .curso2 .curso1-texto {
+        width: 70%;
+        height: auto; }
+        .container .destacados .curso1 .curso1-texto h4, .container .destacados .curso2 .curso1-texto h4 {
+          font-size: 20px; }
+        .container .destacados .curso1 .curso1-texto p, .container .destacados .curso2 .curso1-texto p {
+          font-size: 14px; }
+      .container .destacados .curso1 .foto2, .container .destacados .curso2 .foto2 {
+        width: 200px;
+        height: 200px; }
+      .container .destacados .curso1 .curso2-texto, .container .destacados .curso2 .curso2-texto {
+        width: 70%;
+        height: auto; }
+        .container .destacados .curso1 .curso2-texto h4, .container .destacados .curso2 .curso2-texto h4 {
+          font-size: 20px; }
+        .container .destacados .curso1 .curso2-texto p, .container .destacados .curso2 .curso2-texto p {
+          font-size: 14px; }
+    .container .reviews h3 {
+      padding: 30px;
+      font-size: 24px; }
+    .container .reviews .reseñas .opinion1 .op1, .container .reviews .reseñas .opinion1 .op2, .container .reviews .reseñas .opinion1 .op3, .container .reviews .reseñas .opinion1 .op4, .container .reviews .reseñas .opinion2 .op1, .container .reviews .reseñas .opinion2 .op2, .container .reviews .reseñas .opinion2 .op3, .container .reviews .reseñas .opinion2 .op4, .container .reviews .reseñas .opinion3 .op1, .container .reviews .reseñas .opinion3 .op2, .container .reviews .reseñas .opinion3 .op3, .container .reviews .reseñas .opinion3 .op4, .container .reviews .reseñas .opinion4 .op1, .container .reviews .reseñas .opinion4 .op2, .container .reviews .reseñas .opinion4 .op3, .container .reviews .reseñas .opinion4 .op4 {
+      width: 150px;
+      height: 150px; }
+    .container .reviews .reseñas .opinion1 .opinion1-texto, .container .reviews .reseñas .opinion1 .opinion2-texto, .container .reviews .reseñas .opinion1 .opinion3-texto, .container .reviews .reseñas .opinion1 .opinion4-texto, .container .reviews .reseñas .opinion2 .opinion1-texto, .container .reviews .reseñas .opinion2 .opinion2-texto, .container .reviews .reseñas .opinion2 .opinion3-texto, .container .reviews .reseñas .opinion2 .opinion4-texto, .container .reviews .reseñas .opinion3 .opinion1-texto, .container .reviews .reseñas .opinion3 .opinion2-texto, .container .reviews .reseñas .opinion3 .opinion3-texto, .container .reviews .reseñas .opinion3 .opinion4-texto, .container .reviews .reseñas .opinion4 .opinion1-texto, .container .reviews .reseñas .opinion4 .opinion2-texto, .container .reviews .reseñas .opinion4 .opinion3-texto, .container .reviews .reseñas .opinion4 .opinion4-texto {
+      width: 250px;
+      height: 250px; }
+      .container .reviews .reseñas .opinion1 .opinion1-texto h4, .container .reviews .reseñas .opinion1 .opinion2-texto h4, .container .reviews .reseñas .opinion1 .opinion3-texto h4, .container .reviews .reseñas .opinion1 .opinion4-texto h4, .container .reviews .reseñas .opinion2 .opinion1-texto h4, .container .reviews .reseñas .opinion2 .opinion2-texto h4, .container .reviews .reseñas .opinion2 .opinion3-texto h4, .container .reviews .reseñas .opinion2 .opinion4-texto h4, .container .reviews .reseñas .opinion3 .opinion1-texto h4, .container .reviews .reseñas .opinion3 .opinion2-texto h4, .container .reviews .reseñas .opinion3 .opinion3-texto h4, .container .reviews .reseñas .opinion3 .opinion4-texto h4, .container .reviews .reseñas .opinion4 .opinion1-texto h4, .container .reviews .reseñas .opinion4 .opinion2-texto h4, .container .reviews .reseñas .opinion4 .opinion3-texto h4, .container .reviews .reseñas .opinion4 .opinion4-texto h4 {
+        font-size: 20px; }
+      .container .reviews .reseñas .opinion1 .opinion1-texto p, .container .reviews .reseñas .opinion1 .opinion2-texto p, .container .reviews .reseñas .opinion1 .opinion3-texto p, .container .reviews .reseñas .opinion1 .opinion4-texto p, .container .reviews .reseñas .opinion2 .opinion1-texto p, .container .reviews .reseñas .opinion2 .opinion2-texto p, .container .reviews .reseñas .opinion2 .opinion3-texto p, .container .reviews .reseñas .opinion2 .opinion4-texto p, .container .reviews .reseñas .opinion3 .opinion1-texto p, .container .reviews .reseñas .opinion3 .opinion2-texto p, .container .reviews .reseñas .opinion3 .opinion3-texto p, .container .reviews .reseñas .opinion3 .opinion4-texto p, .container .reviews .reseñas .opinion4 .opinion1-texto p, .container .reviews .reseñas .opinion4 .opinion2-texto p, .container .reviews .reseñas .opinion4 .opinion3-texto p, .container .reviews .reseñas .opinion4 .opinion4-texto p {
+        font-size: 14px;
+        line-height: 1.5; }
+    .container .contacto-index h3 {
+      padding: 30px;
+      font-size: 24px; }
+    .container .contacto-index .caja-contacto .row1 .email-input, .container .contacto-index .caja-contacto .row1 .tel-input, .container .contacto-index .caja-contacto .row1 .name-input, .container .contacto-index .caja-contacto .row1 .lastname-input, .container .contacto-index .caja-contacto .row1 .options, .container .contacto-index .caja-contacto .row2 .email-input, .container .contacto-index .caja-contacto .row2 .tel-input, .container .contacto-index .caja-contacto .row2 .name-input, .container .contacto-index .caja-contacto .row2 .lastname-input, .container .contacto-index .caja-contacto .row2 .options, .container .contacto-index .caja-contacto .row3 .email-input, .container .contacto-index .caja-contacto .row3 .tel-input, .container .contacto-index .caja-contacto .row3 .name-input, .container .contacto-index .caja-contacto .row3 .lastname-input, .container .contacto-index .caja-contacto .row3 .options, .container .contacto-index .caja-contacto .row4 .email-input, .container .contacto-index .caja-contacto .row4 .tel-input, .container .contacto-index .caja-contacto .row4 .name-input, .container .contacto-index .caja-contacto .row4 .lastname-input, .container .contacto-index .caja-contacto .row4 .options {
+      height: 35px; }
+    .container .contacto-index .caja-contacto .row1 .options, .container .contacto-index .caja-contacto .row2 .options, .container .contacto-index .caja-contacto .row3 .options, .container .contacto-index .caja-contacto .row4 .options {
+      padding: 7px; }
+    .container .contacto-index .caja-contacto .row1 .name-input, .container .contacto-index .caja-contacto .row1 .lastname-input, .container .contacto-index .caja-contacto .row1 .email-input, .container .contacto-index .caja-contacto .row1 .tel-input, .container .contacto-index .caja-contacto .row1 .mensaje-input, .container .contacto-index .caja-contacto .row2 .name-input, .container .contacto-index .caja-contacto .row2 .lastname-input, .container .contacto-index .caja-contacto .row2 .email-input, .container .contacto-index .caja-contacto .row2 .tel-input, .container .contacto-index .caja-contacto .row2 .mensaje-input, .container .contacto-index .caja-contacto .row3 .name-input, .container .contacto-index .caja-contacto .row3 .lastname-input, .container .contacto-index .caja-contacto .row3 .email-input, .container .contacto-index .caja-contacto .row3 .tel-input, .container .contacto-index .caja-contacto .row3 .mensaje-input, .container .contacto-index .caja-contacto .row4 .name-input, .container .contacto-index .caja-contacto .row4 .lastname-input, .container .contacto-index .caja-contacto .row4 .email-input, .container .contacto-index .caja-contacto .row4 .tel-input, .container .contacto-index .caja-contacto .row4 .mensaje-input {
+      padding: 5px; }
+    .container .contacto-index .caja-contacto .row1 .name, .container .contacto-index .caja-contacto .row1 .lastname, .container .contacto-index .caja-contacto .row1 .mail, .container .contacto-index .caja-contacto .row1 .tel, .container .contacto-index .caja-contacto .row1 .motivo, .container .contacto-index .caja-contacto .row1 .mensaje, .container .contacto-index .caja-contacto .row1 .options, .container .contacto-index .caja-contacto .row1 .name-input, .container .contacto-index .caja-contacto .row1 .lastname-input, .container .contacto-index .caja-contacto .row1 .email-input, .container .contacto-index .caja-contacto .row1 .tel-input, .container .contacto-index .caja-contacto .row1 .mensaje-input, .container .contacto-index .caja-contacto .row2 .name, .container .contacto-index .caja-contacto .row2 .lastname, .container .contacto-index .caja-contacto .row2 .mail, .container .contacto-index .caja-contacto .row2 .tel, .container .contacto-index .caja-contacto .row2 .motivo, .container .contacto-index .caja-contacto .row2 .mensaje, .container .contacto-index .caja-contacto .row2 .options, .container .contacto-index .caja-contacto .row2 .name-input, .container .contacto-index .caja-contacto .row2 .lastname-input, .container .contacto-index .caja-contacto .row2 .email-input, .container .contacto-index .caja-contacto .row2 .tel-input, .container .contacto-index .caja-contacto .row2 .mensaje-input, .container .contacto-index .caja-contacto .row3 .name, .container .contacto-index .caja-contacto .row3 .lastname, .container .contacto-index .caja-contacto .row3 .mail, .container .contacto-index .caja-contacto .row3 .tel, .container .contacto-index .caja-contacto .row3 .motivo, .container .contacto-index .caja-contacto .row3 .mensaje, .container .contacto-index .caja-contacto .row3 .options, .container .contacto-index .caja-contacto .row3 .name-input, .container .contacto-index .caja-contacto .row3 .lastname-input, .container .contacto-index .caja-contacto .row3 .email-input, .container .contacto-index .caja-contacto .row3 .tel-input, .container .contacto-index .caja-contacto .row3 .mensaje-input, .container .contacto-index .caja-contacto .row4 .name, .container .contacto-index .caja-contacto .row4 .lastname, .container .contacto-index .caja-contacto .row4 .mail, .container .contacto-index .caja-contacto .row4 .tel, .container .contacto-index .caja-contacto .row4 .motivo, .container .contacto-index .caja-contacto .row4 .mensaje, .container .contacto-index .caja-contacto .row4 .options, .container .contacto-index .caja-contacto .row4 .name-input, .container .contacto-index .caja-contacto .row4 .lastname-input, .container .contacto-index .caja-contacto .row4 .email-input, .container .contacto-index .caja-contacto .row4 .tel-input, .container .contacto-index .caja-contacto .row4 .mensaje-input {
+      font-size: 16px; }
+    .container .contacto-index .caja-contacto .btn-input {
+      font-size: 16px; }
+    .container .sobre-mi {
+      grid-template-columns: 2fr 1fr; }
+      .container .sobre-mi .item1 {
+        padding: 30px 20px 50px;
+        font-size: 30px; }
+      .container .sobre-mi .item2, .container .sobre-mi .item3 {
+        font-size: 16px;
+        text-align: left; }
+      .container .sobre-mi .letter {
+        font-size: 26px; }
+      .container .sobre-mi .item4 {
+        width: 600px; }
+    .container .servicios h2 {
+      padding: 30px;
+      font-size: 30px; }
+    .container .servicios p {
+      font-size: 16px; }
+    .container .servicios .servicios-caja {
+      margin-bottom: 35px; }
+      .container .servicios .servicios-caja h3 {
+        font-size: 24px; }
+      .container .servicios .servicios-caja .servicios-fotos figure {
+        width: 300px;
+        height: 300px; }
+        .container .servicios .servicios-caja .servicios-fotos figure:hover > .capa h3 {
+          margin-top: 30px; }
+        .container .servicios .servicios-caja .servicios-fotos figure:hover > .capa2 h3 {
+          margin-top: 40px; }
+        .container .servicios .servicios-caja .servicios-fotos figure .capa2 h3 {
+          padding: 50px 20px; }
+        .container .servicios .servicios-caja .servicios-fotos figure .capa h3 {
+          padding: 20px; }
+        .container .servicios .servicios-caja .servicios-fotos figure .capa p {
+          font-size: 14px;
+          line-height: 1.5;
+          max-width: 250px; }
+    .container .para-vos h2 {
+      padding: 30px;
+      font-size: 30px; }
+    .container .para-vos p {
+      padding: 10px 50px 50px;
+      font-size: 16px; }
+    .container .para-vos .videos {
+      margin-bottom: 30px; }
+      .container .para-vos .videos .video {
+        width: 300px; }
+    .container .galeria h2 {
+      padding: 30px;
+      font-size: 30px; }
+    .container .galeria .fotos-galeria .img1, .container .galeria .fotos-galeria .img2, .container .galeria .fotos-galeria .img3, .container .galeria .fotos-galeria .img4, .container .galeria .fotos-galeria .img5, .container .galeria .fotos-galeria .img6, .container .galeria .fotos-galeria .img7, .container .galeria .fotos-galeria .img8, .container .galeria .fotos-galeria .img9, .container .galeria .fotos-galeria .img10, .container .galeria .fotos-galeria .img11, .container .galeria .fotos-galeria .img12 {
+      width: 400px;
+      height: 600px; }
+    .container .contacto h2 {
+      padding: 30px;
+      font-size: 30px; }
+    .container .contacto .fb-contacto, .container .contacto .ig-contacto, .container .contacto .icono-mail {
+      width: 30px;
+      height: 30px; }
+    .container .contacto .mail-contacto p {
+      padding: 20px 10px;
+      font-size: 16px; }
+    .container .contacto p {
+      padding: 10px 50px;
+      font-size: 16px; }
+    .container .contacto .caja-contacto2 {
+      margin-bottom: 30px; }
+      .container .contacto .caja-contacto2 .row1 .email-input, .container .contacto .caja-contacto2 .row1 .tel-input, .container .contacto .caja-contacto2 .row1 .name-input, .container .contacto .caja-contacto2 .row1 .lastname-input, .container .contacto .caja-contacto2 .row1 .options, .container .contacto .caja-contacto2 .row2 .email-input, .container .contacto .caja-contacto2 .row2 .tel-input, .container .contacto .caja-contacto2 .row2 .name-input, .container .contacto .caja-contacto2 .row2 .lastname-input, .container .contacto .caja-contacto2 .row2 .options, .container .contacto .caja-contacto2 .row3 .email-input, .container .contacto .caja-contacto2 .row3 .tel-input, .container .contacto .caja-contacto2 .row3 .name-input, .container .contacto .caja-contacto2 .row3 .lastname-input, .container .contacto .caja-contacto2 .row3 .options, .container .contacto .caja-contacto2 .row4 .email-input, .container .contacto .caja-contacto2 .row4 .tel-input, .container .contacto .caja-contacto2 .row4 .name-input, .container .contacto .caja-contacto2 .row4 .lastname-input, .container .contacto .caja-contacto2 .row4 .options {
+        height: 35px; }
+      .container .contacto .caja-contacto2 .row1 .options, .container .contacto .caja-contacto2 .row2 .options, .container .contacto .caja-contacto2 .row3 .options, .container .contacto .caja-contacto2 .row4 .options {
+        padding: 7px; }
+      .container .contacto .caja-contacto2 .row1 .name-input, .container .contacto .caja-contacto2 .row1 .lastname-input, .container .contacto .caja-contacto2 .row1 .email-input, .container .contacto .caja-contacto2 .row1 .tel-input, .container .contacto .caja-contacto2 .row1 .mensaje-input, .container .contacto .caja-contacto2 .row2 .name-input, .container .contacto .caja-contacto2 .row2 .lastname-input, .container .contacto .caja-contacto2 .row2 .email-input, .container .contacto .caja-contacto2 .row2 .tel-input, .container .contacto .caja-contacto2 .row2 .mensaje-input, .container .contacto .caja-contacto2 .row3 .name-input, .container .contacto .caja-contacto2 .row3 .lastname-input, .container .contacto .caja-contacto2 .row3 .email-input, .container .contacto .caja-contacto2 .row3 .tel-input, .container .contacto .caja-contacto2 .row3 .mensaje-input, .container .contacto .caja-contacto2 .row4 .name-input, .container .contacto .caja-contacto2 .row4 .lastname-input, .container .contacto .caja-contacto2 .row4 .email-input, .container .contacto .caja-contacto2 .row4 .tel-input, .container .contacto .caja-contacto2 .row4 .mensaje-input {
+        padding: 5px; }
+      .container .contacto .caja-contacto2 .row1 .name, .container .contacto .caja-contacto2 .row1 .lastname, .container .contacto .caja-contacto2 .row1 .mail, .container .contacto .caja-contacto2 .row1 .tel, .container .contacto .caja-contacto2 .row1 .motivo, .container .contacto .caja-contacto2 .row1 .mensaje, .container .contacto .caja-contacto2 .row1 .options, .container .contacto .caja-contacto2 .row1 .name-input, .container .contacto .caja-contacto2 .row1 .lastname-input, .container .contacto .caja-contacto2 .row1 .email-input, .container .contacto .caja-contacto2 .row1 .tel-input, .container .contacto .caja-contacto2 .row1 .mensaje-input, .container .contacto .caja-contacto2 .row2 .name, .container .contacto .caja-contacto2 .row2 .lastname, .container .contacto .caja-contacto2 .row2 .mail, .container .contacto .caja-contacto2 .row2 .tel, .container .contacto .caja-contacto2 .row2 .motivo, .container .contacto .caja-contacto2 .row2 .mensaje, .container .contacto .caja-contacto2 .row2 .options, .container .contacto .caja-contacto2 .row2 .name-input, .container .contacto .caja-contacto2 .row2 .lastname-input, .container .contacto .caja-contacto2 .row2 .email-input, .container .contacto .caja-contacto2 .row2 .tel-input, .container .contacto .caja-contacto2 .row2 .mensaje-input, .container .contacto .caja-contacto2 .row3 .name, .container .contacto .caja-contacto2 .row3 .lastname, .container .contacto .caja-contacto2 .row3 .mail, .container .contacto .caja-contacto2 .row3 .tel, .container .contacto .caja-contacto2 .row3 .motivo, .container .contacto .caja-contacto2 .row3 .mensaje, .container .contacto .caja-contacto2 .row3 .options, .container .contacto .caja-contacto2 .row3 .name-input, .container .contacto .caja-contacto2 .row3 .lastname-input, .container .contacto .caja-contacto2 .row3 .email-input, .container .contacto .caja-contacto2 .row3 .tel-input, .container .contacto .caja-contacto2 .row3 .mensaje-input, .container .contacto .caja-contacto2 .row4 .name, .container .contacto .caja-contacto2 .row4 .lastname, .container .contacto .caja-contacto2 .row4 .mail, .container .contacto .caja-contacto2 .row4 .tel, .container .contacto .caja-contacto2 .row4 .motivo, .container .contacto .caja-contacto2 .row4 .mensaje, .container .contacto .caja-contacto2 .row4 .options, .container .contacto .caja-contacto2 .row4 .name-input, .container .contacto .caja-contacto2 .row4 .lastname-input, .container .contacto .caja-contacto2 .row4 .email-input, .container .contacto .caja-contacto2 .row4 .tel-input, .container .contacto .caja-contacto2 .row4 .mensaje-input {
+        font-size: 16px; }
+      .container .contacto .caja-contacto2 .btn-input {
+        font-size: 16px; }
+    .container footer .redes-footer .fb-footer, .container footer .redes-footer .ig-footer {
+      width: 50px;
+      height: 50px; }
+    .container footer .logo-footer {
+      width: 150px; }
+    .container footer .footer-texto h2, .container footer .footer-texto h3 {
+      font-size: 14px; } }
 
-    100% {
-        -webkit-transform: rotateY(0);
-        transform: rotateY(0);
-        opacity: 1;
-    }
-}
+@media (max-width: 1199px) {
+  .container {
+    grid-template-rows: 80px 1fr 0.05fr; }
+    .container .menu-mobile {
+      display: none; }
+    .container .menu-desktop {
+      grid-template-rows: 80px; }
+      .container .menu-desktop .logo .foto-logo {
+        width: 150px; }
+      .container .menu-desktop nav .navbar {
+        gap: 30px; }
+        .container .menu-desktop nav .navbar a {
+          font-size: 18px; }
+      .container .menu-desktop .redes .fb, .container .menu-desktop .redes .ig {
+        width: 30px;
+        height: 30px; }
+    .container .banner {
+      height: 550px; }
+      .container .banner .banner-texto {
+        width: 100%;
+        font-size: 70px; }
+    .container .company .mision img, .container .company .vision img, .container .company .valores img {
+      width: 150px;
+      height: 150px; }
+    .container .company .mision .about1, .container .company .mision .about2, .container .company .mision .about3, .container .company .vision .about1, .container .company .vision .about2, .container .company .vision .about3, .container .company .valores .about1, .container .company .valores .about2, .container .company .valores .about3 {
+      width: 280px;
+      height: 290px; }
+      .container .company .mision .about1 h2, .container .company .mision .about2 h2, .container .company .mision .about3 h2, .container .company .vision .about1 h2, .container .company .vision .about2 h2, .container .company .vision .about3 h2, .container .company .valores .about1 h2, .container .company .valores .about2 h2, .container .company .valores .about3 h2 {
+        padding: 10px;
+        font-size: 20px; }
+      .container .company .mision .about1 p, .container .company .mision .about2 p, .container .company .mision .about3 p, .container .company .vision .about1 p, .container .company .vision .about2 p, .container .company .vision .about3 p, .container .company .valores .about1 p, .container .company .valores .about2 p, .container .company .valores .about3 p {
+        padding: 20px;
+        font-size: 14px; }
+    .container .destacados h3 {
+      padding: 30px;
+      font-size: 24px; }
+    .container .destacados .curso1, .container .destacados .curso2 {
+      height: 200px;
+      margin-bottom: 20px; }
+      .container .destacados .curso1 .foto1, .container .destacados .curso2 .foto1 {
+        width: 200px;
+        height: 200px; }
+      .container .destacados .curso1 .curso1-texto, .container .destacados .curso2 .curso1-texto {
+        width: 70%;
+        height: auto; }
+        .container .destacados .curso1 .curso1-texto h4, .container .destacados .curso2 .curso1-texto h4 {
+          padding: 5px;
+          font-size: 20px; }
+        .container .destacados .curso1 .curso1-texto p, .container .destacados .curso2 .curso1-texto p {
+          font-size: 14px; }
+      .container .destacados .curso1 .foto2, .container .destacados .curso2 .foto2 {
+        width: 200px;
+        height: 200px; }
+      .container .destacados .curso1 .curso2-texto, .container .destacados .curso2 .curso2-texto {
+        width: 70%;
+        height: auto; }
+        .container .destacados .curso1 .curso2-texto h4, .container .destacados .curso2 .curso2-texto h4 {
+          padding: 5px;
+          font-size: 20px; }
+        .container .destacados .curso1 .curso2-texto p, .container .destacados .curso2 .curso2-texto p {
+          font-size: 14px; }
+      .container .destacados .curso1 .btn-dest, .container .destacados .curso2 .btn-dest {
+        display: none; }
+    .container .reviews h3 {
+      padding: 30px;
+      font-size: 24px; }
+    .container .reviews .reseñas .opinion1 .op1, .container .reviews .reseñas .opinion1 .op2, .container .reviews .reseñas .opinion1 .op3, .container .reviews .reseñas .opinion1 .op4, .container .reviews .reseñas .opinion2 .op1, .container .reviews .reseñas .opinion2 .op2, .container .reviews .reseñas .opinion2 .op3, .container .reviews .reseñas .opinion2 .op4, .container .reviews .reseñas .opinion3 .op1, .container .reviews .reseñas .opinion3 .op2, .container .reviews .reseñas .opinion3 .op3, .container .reviews .reseñas .opinion3 .op4, .container .reviews .reseñas .opinion4 .op1, .container .reviews .reseñas .opinion4 .op2, .container .reviews .reseñas .opinion4 .op3, .container .reviews .reseñas .opinion4 .op4 {
+      width: 150px;
+      height: 150px; }
+    .container .reviews .reseñas .opinion1 .opinion1-texto, .container .reviews .reseñas .opinion1 .opinion2-texto, .container .reviews .reseñas .opinion1 .opinion3-texto, .container .reviews .reseñas .opinion1 .opinion4-texto, .container .reviews .reseñas .opinion2 .opinion1-texto, .container .reviews .reseñas .opinion2 .opinion2-texto, .container .reviews .reseñas .opinion2 .opinion3-texto, .container .reviews .reseñas .opinion2 .opinion4-texto, .container .reviews .reseñas .opinion3 .opinion1-texto, .container .reviews .reseñas .opinion3 .opinion2-texto, .container .reviews .reseñas .opinion3 .opinion3-texto, .container .reviews .reseñas .opinion3 .opinion4-texto, .container .reviews .reseñas .opinion4 .opinion1-texto, .container .reviews .reseñas .opinion4 .opinion2-texto, .container .reviews .reseñas .opinion4 .opinion3-texto, .container .reviews .reseñas .opinion4 .opinion4-texto {
+      width: 250px;
+      height: 310px; }
+      .container .reviews .reseñas .opinion1 .opinion1-texto h4, .container .reviews .reseñas .opinion1 .opinion2-texto h4, .container .reviews .reseñas .opinion1 .opinion3-texto h4, .container .reviews .reseñas .opinion1 .opinion4-texto h4, .container .reviews .reseñas .opinion2 .opinion1-texto h4, .container .reviews .reseñas .opinion2 .opinion2-texto h4, .container .reviews .reseñas .opinion2 .opinion3-texto h4, .container .reviews .reseñas .opinion2 .opinion4-texto h4, .container .reviews .reseñas .opinion3 .opinion1-texto h4, .container .reviews .reseñas .opinion3 .opinion2-texto h4, .container .reviews .reseñas .opinion3 .opinion3-texto h4, .container .reviews .reseñas .opinion3 .opinion4-texto h4, .container .reviews .reseñas .opinion4 .opinion1-texto h4, .container .reviews .reseñas .opinion4 .opinion2-texto h4, .container .reviews .reseñas .opinion4 .opinion3-texto h4, .container .reviews .reseñas .opinion4 .opinion4-texto h4 {
+        font-size: 20px; }
+      .container .reviews .reseñas .opinion1 .opinion1-texto p, .container .reviews .reseñas .opinion1 .opinion2-texto p, .container .reviews .reseñas .opinion1 .opinion3-texto p, .container .reviews .reseñas .opinion1 .opinion4-texto p, .container .reviews .reseñas .opinion2 .opinion1-texto p, .container .reviews .reseñas .opinion2 .opinion2-texto p, .container .reviews .reseñas .opinion2 .opinion3-texto p, .container .reviews .reseñas .opinion2 .opinion4-texto p, .container .reviews .reseñas .opinion3 .opinion1-texto p, .container .reviews .reseñas .opinion3 .opinion2-texto p, .container .reviews .reseñas .opinion3 .opinion3-texto p, .container .reviews .reseñas .opinion3 .opinion4-texto p, .container .reviews .reseñas .opinion4 .opinion1-texto p, .container .reviews .reseñas .opinion4 .opinion2-texto p, .container .reviews .reseñas .opinion4 .opinion3-texto p, .container .reviews .reseñas .opinion4 .opinion4-texto p {
+        font-size: 14px;
+        text-align: justify; }
+    .container .contacto-index h3 {
+      padding: 30px;
+      font-size: 24px; }
+    .container .contacto-index .caja-contacto .row1 .email-input, .container .contacto-index .caja-contacto .row1 .tel-input, .container .contacto-index .caja-contacto .row1 .name-input, .container .contacto-index .caja-contacto .row1 .lastname-input, .container .contacto-index .caja-contacto .row1 .options, .container .contacto-index .caja-contacto .row2 .email-input, .container .contacto-index .caja-contacto .row2 .tel-input, .container .contacto-index .caja-contacto .row2 .name-input, .container .contacto-index .caja-contacto .row2 .lastname-input, .container .contacto-index .caja-contacto .row2 .options, .container .contacto-index .caja-contacto .row3 .email-input, .container .contacto-index .caja-contacto .row3 .tel-input, .container .contacto-index .caja-contacto .row3 .name-input, .container .contacto-index .caja-contacto .row3 .lastname-input, .container .contacto-index .caja-contacto .row3 .options, .container .contacto-index .caja-contacto .row4 .email-input, .container .contacto-index .caja-contacto .row4 .tel-input, .container .contacto-index .caja-contacto .row4 .name-input, .container .contacto-index .caja-contacto .row4 .lastname-input, .container .contacto-index .caja-contacto .row4 .options {
+      height: 30px; }
+    .container .contacto-index .caja-contacto .row1 .options, .container .contacto-index .caja-contacto .row2 .options, .container .contacto-index .caja-contacto .row3 .options, .container .contacto-index .caja-contacto .row4 .options {
+      padding: 5px; }
+    .container .contacto-index .caja-contacto .row1 .name-input, .container .contacto-index .caja-contacto .row1 .lastname-input, .container .contacto-index .caja-contacto .row1 .email-input, .container .contacto-index .caja-contacto .row1 .tel-input, .container .contacto-index .caja-contacto .row1 .mensaje-input, .container .contacto-index .caja-contacto .row2 .name-input, .container .contacto-index .caja-contacto .row2 .lastname-input, .container .contacto-index .caja-contacto .row2 .email-input, .container .contacto-index .caja-contacto .row2 .tel-input, .container .contacto-index .caja-contacto .row2 .mensaje-input, .container .contacto-index .caja-contacto .row3 .name-input, .container .contacto-index .caja-contacto .row3 .lastname-input, .container .contacto-index .caja-contacto .row3 .email-input, .container .contacto-index .caja-contacto .row3 .tel-input, .container .contacto-index .caja-contacto .row3 .mensaje-input, .container .contacto-index .caja-contacto .row4 .name-input, .container .contacto-index .caja-contacto .row4 .lastname-input, .container .contacto-index .caja-contacto .row4 .email-input, .container .contacto-index .caja-contacto .row4 .tel-input, .container .contacto-index .caja-contacto .row4 .mensaje-input {
+      padding: 4px; }
+    .container .contacto-index .caja-contacto .row1 .name, .container .contacto-index .caja-contacto .row1 .lastname, .container .contacto-index .caja-contacto .row1 .mail, .container .contacto-index .caja-contacto .row1 .tel, .container .contacto-index .caja-contacto .row1 .motivo, .container .contacto-index .caja-contacto .row1 .mensaje, .container .contacto-index .caja-contacto .row1 .options, .container .contacto-index .caja-contacto .row1 .name-input, .container .contacto-index .caja-contacto .row1 .lastname-input, .container .contacto-index .caja-contacto .row1 .email-input, .container .contacto-index .caja-contacto .row1 .tel-input, .container .contacto-index .caja-contacto .row1 .mensaje-input, .container .contacto-index .caja-contacto .row2 .name, .container .contacto-index .caja-contacto .row2 .lastname, .container .contacto-index .caja-contacto .row2 .mail, .container .contacto-index .caja-contacto .row2 .tel, .container .contacto-index .caja-contacto .row2 .motivo, .container .contacto-index .caja-contacto .row2 .mensaje, .container .contacto-index .caja-contacto .row2 .options, .container .contacto-index .caja-contacto .row2 .name-input, .container .contacto-index .caja-contacto .row2 .lastname-input, .container .contacto-index .caja-contacto .row2 .email-input, .container .contacto-index .caja-contacto .row2 .tel-input, .container .contacto-index .caja-contacto .row2 .mensaje-input, .container .contacto-index .caja-contacto .row3 .name, .container .contacto-index .caja-contacto .row3 .lastname, .container .contacto-index .caja-contacto .row3 .mail, .container .contacto-index .caja-contacto .row3 .tel, .container .contacto-index .caja-contacto .row3 .motivo, .container .contacto-index .caja-contacto .row3 .mensaje, .container .contacto-index .caja-contacto .row3 .options, .container .contacto-index .caja-contacto .row3 .name-input, .container .contacto-index .caja-contacto .row3 .lastname-input, .container .contacto-index .caja-contacto .row3 .email-input, .container .contacto-index .caja-contacto .row3 .tel-input, .container .contacto-index .caja-contacto .row3 .mensaje-input, .container .contacto-index .caja-contacto .row4 .name, .container .contacto-index .caja-contacto .row4 .lastname, .container .contacto-index .caja-contacto .row4 .mail, .container .contacto-index .caja-contacto .row4 .tel, .container .contacto-index .caja-contacto .row4 .motivo, .container .contacto-index .caja-contacto .row4 .mensaje, .container .contacto-index .caja-contacto .row4 .options, .container .contacto-index .caja-contacto .row4 .name-input, .container .contacto-index .caja-contacto .row4 .lastname-input, .container .contacto-index .caja-contacto .row4 .email-input, .container .contacto-index .caja-contacto .row4 .tel-input, .container .contacto-index .caja-contacto .row4 .mensaje-input {
+      font-size: 14px; }
+    .container .contacto-index .caja-contacto .btn-input {
+      font-size: 14px; }
+    .container .sobre-mi {
+      grid-template-columns: 2fr 1fr; }
+      .container .sobre-mi .item1 {
+        padding: 30px 20px 50px;
+        font-size: 30px; }
+      .container .sobre-mi .item2, .container .sobre-mi .item3 {
+        padding: 20px 50px;
+        text-align: left;
+        font-size: 14px; }
+      .container .sobre-mi .letter {
+        font-size: 24px; }
+      .container .sobre-mi .item4 {
+        width: 600px; }
+    .container .servicios h2 {
+      padding: 30px;
+      font-size: 30px; }
+    .container .servicios p {
+      font-size: 14px; }
+    .container .servicios .servicios-caja {
+      margin-bottom: 35px; }
+      .container .servicios .servicios-caja h3 {
+        font-size: 24px; }
+      .container .servicios .servicios-caja .servicios-fotos figure {
+        width: 250px;
+        height: 250px;
+        position: relative; }
+        .container .servicios .servicios-caja .servicios-fotos figure:hover > .capa h3 {
+          margin-top: 10px; }
+        .container .servicios .servicios-caja .servicios-fotos figure:hover > .capa2 h3 {
+          margin-top: 70px; }
+        .container .servicios .servicios-caja .servicios-fotos figure .capa h3, .container .servicios .servicios-caja .servicios-fotos figure .capa2 h3 {
+          font-size: 24px;
+          padding: 10px; }
+        .container .servicios .servicios-caja .servicios-fotos figure .capa p {
+          font-size: 14px;
+          line-height: 1.5;
+          max-width: 200px; }
+    .container .para-vos h2 {
+      padding: 30px;
+      font-size: 30px; }
+    .container .para-vos p {
+      font-size: 14px; }
+    .container .para-vos .videos .video {
+      width: 350px; }
+    .container .galeria h2 {
+      padding: 30px;
+      font-size: 30px; }
+    .container .galeria .fotos-galeria .img1, .container .galeria .fotos-galeria .img2, .container .galeria .fotos-galeria .img3, .container .galeria .fotos-galeria .img4, .container .galeria .fotos-galeria .img5, .container .galeria .fotos-galeria .img6, .container .galeria .fotos-galeria .img7, .container .galeria .fotos-galeria .img8, .container .galeria .fotos-galeria .img9, .container .galeria .fotos-galeria .img10, .container .galeria .fotos-galeria .img11, .container .galeria .fotos-galeria .img12 {
+      width: 400px;
+      height: 600px; }
+    .container .contacto h2 {
+      padding: 30px;
+      font-size: 30px; }
+    .container .contacto .fb-contacto, .container .contacto .ig-contacto, .container .contacto .icono-mail {
+      width: 30px;
+      height: 30px; }
+    .container .contacto .mail-contacto p {
+      padding: 15px;
+      font-size: 16px; }
+    .container .contacto p {
+      padding: 10px 50px 50px;
+      font-size: 14px; }
+    .container .contacto .caja-contacto2 .row1 .email-input, .container .contacto .caja-contacto2 .row1 .tel-input, .container .contacto .caja-contacto2 .row1 .name-input, .container .contacto .caja-contacto2 .row1 .lastname-input, .container .contacto .caja-contacto2 .row1 .options, .container .contacto .caja-contacto2 .row2 .email-input, .container .contacto .caja-contacto2 .row2 .tel-input, .container .contacto .caja-contacto2 .row2 .name-input, .container .contacto .caja-contacto2 .row2 .lastname-input, .container .contacto .caja-contacto2 .row2 .options, .container .contacto .caja-contacto2 .row3 .email-input, .container .contacto .caja-contacto2 .row3 .tel-input, .container .contacto .caja-contacto2 .row3 .name-input, .container .contacto .caja-contacto2 .row3 .lastname-input, .container .contacto .caja-contacto2 .row3 .options, .container .contacto .caja-contacto2 .row4 .email-input, .container .contacto .caja-contacto2 .row4 .tel-input, .container .contacto .caja-contacto2 .row4 .name-input, .container .contacto .caja-contacto2 .row4 .lastname-input, .container .contacto .caja-contacto2 .row4 .options {
+      height: 30px; }
+    .container .contacto .caja-contacto2 .row1 .name-input, .container .contacto .caja-contacto2 .row1 .lastname-input, .container .contacto .caja-contacto2 .row1 .email-input, .container .contacto .caja-contacto2 .row1 .tel-input, .container .contacto .caja-contacto2 .row1 .mensaje-input, .container .contacto .caja-contacto2 .row1 .options, .container .contacto .caja-contacto2 .row2 .name-input, .container .contacto .caja-contacto2 .row2 .lastname-input, .container .contacto .caja-contacto2 .row2 .email-input, .container .contacto .caja-contacto2 .row2 .tel-input, .container .contacto .caja-contacto2 .row2 .mensaje-input, .container .contacto .caja-contacto2 .row2 .options, .container .contacto .caja-contacto2 .row3 .name-input, .container .contacto .caja-contacto2 .row3 .lastname-input, .container .contacto .caja-contacto2 .row3 .email-input, .container .contacto .caja-contacto2 .row3 .tel-input, .container .contacto .caja-contacto2 .row3 .mensaje-input, .container .contacto .caja-contacto2 .row3 .options, .container .contacto .caja-contacto2 .row4 .name-input, .container .contacto .caja-contacto2 .row4 .lastname-input, .container .contacto .caja-contacto2 .row4 .email-input, .container .contacto .caja-contacto2 .row4 .tel-input, .container .contacto .caja-contacto2 .row4 .mensaje-input, .container .contacto .caja-contacto2 .row4 .options {
+      padding: 5px; }
+    .container .contacto .caja-contacto2 .row1 .name, .container .contacto .caja-contacto2 .row1 .lastname, .container .contacto .caja-contacto2 .row1 .mail, .container .contacto .caja-contacto2 .row1 .tel, .container .contacto .caja-contacto2 .row1 .motivo, .container .contacto .caja-contacto2 .row1 .mensaje, .container .contacto .caja-contacto2 .row1 .options, .container .contacto .caja-contacto2 .row1 .name-input, .container .contacto .caja-contacto2 .row1 .lastname-input, .container .contacto .caja-contacto2 .row1 .email-input, .container .contacto .caja-contacto2 .row1 .tel-input, .container .contacto .caja-contacto2 .row1 .mensaje-input, .container .contacto .caja-contacto2 .row2 .name, .container .contacto .caja-contacto2 .row2 .lastname, .container .contacto .caja-contacto2 .row2 .mail, .container .contacto .caja-contacto2 .row2 .tel, .container .contacto .caja-contacto2 .row2 .motivo, .container .contacto .caja-contacto2 .row2 .mensaje, .container .contacto .caja-contacto2 .row2 .options, .container .contacto .caja-contacto2 .row2 .name-input, .container .contacto .caja-contacto2 .row2 .lastname-input, .container .contacto .caja-contacto2 .row2 .email-input, .container .contacto .caja-contacto2 .row2 .tel-input, .container .contacto .caja-contacto2 .row2 .mensaje-input, .container .contacto .caja-contacto2 .row3 .name, .container .contacto .caja-contacto2 .row3 .lastname, .container .contacto .caja-contacto2 .row3 .mail, .container .contacto .caja-contacto2 .row3 .tel, .container .contacto .caja-contacto2 .row3 .motivo, .container .contacto .caja-contacto2 .row3 .mensaje, .container .contacto .caja-contacto2 .row3 .options, .container .contacto .caja-contacto2 .row3 .name-input, .container .contacto .caja-contacto2 .row3 .lastname-input, .container .contacto .caja-contacto2 .row3 .email-input, .container .contacto .caja-contacto2 .row3 .tel-input, .container .contacto .caja-contacto2 .row3 .mensaje-input, .container .contacto .caja-contacto2 .row4 .name, .container .contacto .caja-contacto2 .row4 .lastname, .container .contacto .caja-contacto2 .row4 .mail, .container .contacto .caja-contacto2 .row4 .tel, .container .contacto .caja-contacto2 .row4 .motivo, .container .contacto .caja-contacto2 .row4 .mensaje, .container .contacto .caja-contacto2 .row4 .options, .container .contacto .caja-contacto2 .row4 .name-input, .container .contacto .caja-contacto2 .row4 .lastname-input, .container .contacto .caja-contacto2 .row4 .email-input, .container .contacto .caja-contacto2 .row4 .tel-input, .container .contacto .caja-contacto2 .row4 .mensaje-input {
+      font-size: 14px; }
+    .container .contacto .caja-contacto2 .btn-input {
+      font-size: 14px; }
+    .container footer .redes-footer .fb-footer, .container footer .redes-footer .ig-footer {
+      width: 50px;
+      height: 50px; }
+    .container footer .logo-footer {
+      width: 150px; }
+    .container footer .footer-texto h2, .container footer .footer-texto h3 {
+      font-size: 14px; } }
 
-
-
-
-
-
-/*responsive*/
-@media (max-width:768px) {
-
-    .subtitulo {
-        font-size: 0rem;
-    }
-
-    .navBar {
-        background-color: rgb(250, 171, 120);
-        flex-direction: column;
+@media (max-width: 1023px) {
+  .container {
+    grid-template-rows: 70px 1fr 0.05fr; }
+    .container .menu-desktop {
+      display: none; }
+    .container .menu-mobile {
+      width: 100vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      background-color: #FFFFFF;
+      position: fixed;
+      top: 0;
+      z-index: 1; }
+      .container .menu-mobile #check {
+        display: none; }
+        .container .menu-mobile #check:checked ~ ul {
+          left: 0; }
+      .container .menu-mobile .check-btn {
+        display: flex;
+        flex-flow: unset;
+        justify-content: flex-start;
         align-items: center;
-    }
-}
-
-@media (max-width:320px) {
-    .navBar {
-        background-color: rgb(134, 8, 10);
-        flex-direction: column;
+        padding-left: 12px; }
+        .container .menu-mobile .check-btn .icono-menu {
+          width: 24px;
+          height: 24px; }
+      .container .menu-mobile .mobile-navbar {
+        width: 100%;
+        height: 500px;
+        background-color: #c51e00;;
+        margin-top: 70px;
+        padding: 50px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
         align-items: center;
+        text-align: center;
+        gap: 30px;
+        list-style: none;
+        position: fixed;
+        transition: all 0.5s;
+        left: -100%; }
+        .container .menu-mobile .mobile-navbar li {
+          display: flex;
+          flex-flow: unset;
+          justify-content: center;
+          align-items: center;
+          width: 200px;
+          height: 50px;
+          box-shadow: 6px 6px 30px 3px rgba(0, 0, 0, 0.5);
+          transition: all 0.5s; }
+          .container .menu-mobile .mobile-navbar li:hover {
+            background-color: #c24630;
+            transform: scale(1.1); }
+          .container .menu-mobile .mobile-navbar li a {
+            display: flex;
+            flex-flow: unset;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: #000000;
+            font-family: "Quicksand", sans-serif;
+            font-weight: normal;
+            font-size: 18px; }
+            .container .menu-mobile .mobile-navbar li a:hover {
+              font-weight: bold; }
+      .container .menu-mobile .logo-marca {
+        height: 70px;
+        justify-self: center; }
+        .container .menu-mobile .logo-marca .logo-mobile {
+          height: 70px; }
+    .container .banner {
+      height: 480px; }
+      .container .banner .banner-texto {
+        width: 100%;
+        padding: 60px;
+        font-size: 45px; }
+    .container .company {
+      padding-bottom: 20px; }
+      .container .company .mision img, .container .company .vision img, .container .company .valores img {
+        width: 100px;
+        height: 100px; }
+      .container .company .mision .about1, .container .company .mision .about2, .container .company .mision .about3, .container .company .vision .about1, .container .company .vision .about2, .container .company .vision .about3, .container .company .valores .about1, .container .company .valores .about2, .container .company .valores .about3 {
+        width: 240px;
+        height: 240px; }
+        .container .company .mision .about1 h2, .container .company .mision .about2 h2, .container .company .mision .about3 h2, .container .company .vision .about1 h2, .container .company .vision .about2 h2, .container .company .vision .about3 h2, .container .company .valores .about1 h2, .container .company .valores .about2 h2, .container .company .valores .about3 h2 {
+          font-size: 18px;
+          padding: 0px; }
+        .container .company .mision .about1 p, .container .company .mision .about2 p, .container .company .mision .about3 p, .container .company .vision .about1 p, .container .company .vision .about2 p, .container .company .vision .about3 p, .container .company .valores .about1 p, .container .company .valores .about2 p, .container .company .valores .about3 p {
+          font-size: 12px;
+          padding: 20px; }
+    .container .destacados h3 {
+      font-size: 20px;
+      padding: 30px; }
+    .container .destacados .curso1, .container .destacados .curso2 {
+      height: 230px;
+      margin: 20px 0px; }
+      .container .destacados .curso1 .foto1, .container .destacados .curso2 .foto1 {
+        width: 230px;
+        height: 230px; }
+      .container .destacados .curso1 .curso1-texto, .container .destacados .curso2 .curso1-texto {
+        width: 65%;
+        height: auto; }
+        .container .destacados .curso1 .curso1-texto h4, .container .destacados .curso2 .curso1-texto h4 {
+          padding: 5px;
+          font-size: 16px; }
+        .container .destacados .curso1 .curso1-texto p, .container .destacados .curso2 .curso1-texto p {
+          padding: 0px 5px;
+          font-size: 14px; }
+      .container .destacados .curso1 .foto2, .container .destacados .curso2 .foto2 {
+        width: 230px;
+        height: 230px; }
+      .container .destacados .curso1 .curso2-texto, .container .destacados .curso2 .curso2-texto {
+        width: 65%;
+        height: auto; }
+        .container .destacados .curso1 .curso2-texto h4, .container .destacados .curso2 .curso2-texto h4 {
+          padding: 5px;
+          font-size: 16px; }
+        .container .destacados .curso1 .curso2-texto p, .container .destacados .curso2 .curso2-texto p {
+          padding: 0px 5px;
+          font-size: 14px; }
+    .container .reviews h3 {
+      font-size: 20px;
+      padding: 30px; }
+    .container .reviews .reseñas .opinion1 .op1, .container .reviews .reseñas .opinion1 .op2, .container .reviews .reseñas .opinion1 .op3, .container .reviews .reseñas .opinion2 .op1, .container .reviews .reseñas .opinion2 .op2, .container .reviews .reseñas .opinion2 .op3, .container .reviews .reseñas .opinion3 .op1, .container .reviews .reseñas .opinion3 .op2, .container .reviews .reseñas .opinion3 .op3 {
+      width: 150px;
+      height: 150px; }
+    .container .reviews .reseñas .opinion1 .opinion1-texto, .container .reviews .reseñas .opinion1 .opinion2-texto, .container .reviews .reseñas .opinion1 .opinion3-texto, .container .reviews .reseñas .opinion2 .opinion1-texto, .container .reviews .reseñas .opinion2 .opinion2-texto, .container .reviews .reseñas .opinion2 .opinion3-texto, .container .reviews .reseñas .opinion3 .opinion1-texto, .container .reviews .reseñas .opinion3 .opinion2-texto, .container .reviews .reseñas .opinion3 .opinion3-texto {
+      width: 250px;
+      height: 250px; }
+      .container .reviews .reseñas .opinion1 .opinion1-texto h4, .container .reviews .reseñas .opinion1 .opinion2-texto h4, .container .reviews .reseñas .opinion1 .opinion3-texto h4, .container .reviews .reseñas .opinion2 .opinion1-texto h4, .container .reviews .reseñas .opinion2 .opinion2-texto h4, .container .reviews .reseñas .opinion2 .opinion3-texto h4, .container .reviews .reseñas .opinion3 .opinion1-texto h4, .container .reviews .reseñas .opinion3 .opinion2-texto h4, .container .reviews .reseñas .opinion3 .opinion3-texto h4 {
+        font-size: 18px; }
+      .container .reviews .reseñas .opinion1 .opinion1-texto p, .container .reviews .reseñas .opinion1 .opinion2-texto p, .container .reviews .reseñas .opinion1 .opinion3-texto p, .container .reviews .reseñas .opinion2 .opinion1-texto p, .container .reviews .reseñas .opinion2 .opinion2-texto p, .container .reviews .reseñas .opinion2 .opinion3-texto p, .container .reviews .reseñas .opinion3 .opinion1-texto p, .container .reviews .reseñas .opinion3 .opinion2-texto p, .container .reviews .reseñas .opinion3 .opinion3-texto p {
+        font-size: 12px;
+        line-height: 2; }
+    .container .reviews .reseñas .opinion4 {
+      display: none; }
+    .container .contacto-index h3 {
+      font-size: 20px; }
+    .container .contacto-index .caja-contacto .row1 .email-input, .container .contacto-index .caja-contacto .row1 .tel-input, .container .contacto-index .caja-contacto .row1 .name-input, .container .contacto-index .caja-contacto .row1 .lastname-input, .container .contacto-index .caja-contacto .row1 .options, .container .contacto-index .caja-contacto .row2 .email-input, .container .contacto-index .caja-contacto .row2 .tel-input, .container .contacto-index .caja-contacto .row2 .name-input, .container .contacto-index .caja-contacto .row2 .lastname-input, .container .contacto-index .caja-contacto .row2 .options, .container .contacto-index .caja-contacto .row3 .email-input, .container .contacto-index .caja-contacto .row3 .tel-input, .container .contacto-index .caja-contacto .row3 .name-input, .container .contacto-index .caja-contacto .row3 .lastname-input, .container .contacto-index .caja-contacto .row3 .options, .container .contacto-index .caja-contacto .row4 .email-input, .container .contacto-index .caja-contacto .row4 .tel-input, .container .contacto-index .caja-contacto .row4 .name-input, .container .contacto-index .caja-contacto .row4 .lastname-input, .container .contacto-index .caja-contacto .row4 .options {
+      height: 25px; }
+    .container .contacto-index .caja-contacto .row1 .options, .container .contacto-index .caja-contacto .row2 .options, .container .contacto-index .caja-contacto .row3 .options, .container .contacto-index .caja-contacto .row4 .options {
+      padding: 4px; }
+    .container .contacto-index .caja-contacto .row1 .name, .container .contacto-index .caja-contacto .row1 .lastname, .container .contacto-index .caja-contacto .row1 .mail, .container .contacto-index .caja-contacto .row1 .tel, .container .contacto-index .caja-contacto .row1 .motivo, .container .contacto-index .caja-contacto .row1 .mensaje, .container .contacto-index .caja-contacto .row1 .options, .container .contacto-index .caja-contacto .row1 .btn-input, .container .contacto-index .caja-contacto .row1 .name-input, .container .contacto-index .caja-contacto .row1 .lastname-input, .container .contacto-index .caja-contacto .row1 .email-input, .container .contacto-index .caja-contacto .row1 .tel-input, .container .contacto-index .caja-contacto .row1 .mensaje-input, .container .contacto-index .caja-contacto .row2 .name, .container .contacto-index .caja-contacto .row2 .lastname, .container .contacto-index .caja-contacto .row2 .mail, .container .contacto-index .caja-contacto .row2 .tel, .container .contacto-index .caja-contacto .row2 .motivo, .container .contacto-index .caja-contacto .row2 .mensaje, .container .contacto-index .caja-contacto .row2 .options, .container .contacto-index .caja-contacto .row2 .btn-input, .container .contacto-index .caja-contacto .row2 .name-input, .container .contacto-index .caja-contacto .row2 .lastname-input, .container .contacto-index .caja-contacto .row2 .email-input, .container .contacto-index .caja-contacto .row2 .tel-input, .container .contacto-index .caja-contacto .row2 .mensaje-input, .container .contacto-index .caja-contacto .row3 .name, .container .contacto-index .caja-contacto .row3 .lastname, .container .contacto-index .caja-contacto .row3 .mail, .container .contacto-index .caja-contacto .row3 .tel, .container .contacto-index .caja-contacto .row3 .motivo, .container .contacto-index .caja-contacto .row3 .mensaje, .container .contacto-index .caja-contacto .row3 .options, .container .contacto-index .caja-contacto .row3 .btn-input, .container .contacto-index .caja-contacto .row3 .name-input, .container .contacto-index .caja-contacto .row3 .lastname-input, .container .contacto-index .caja-contacto .row3 .email-input, .container .contacto-index .caja-contacto .row3 .tel-input, .container .contacto-index .caja-contacto .row3 .mensaje-input, .container .contacto-index .caja-contacto .row4 .name, .container .contacto-index .caja-contacto .row4 .lastname, .container .contacto-index .caja-contacto .row4 .mail, .container .contacto-index .caja-contacto .row4 .tel, .container .contacto-index .caja-contacto .row4 .motivo, .container .contacto-index .caja-contacto .row4 .mensaje, .container .contacto-index .caja-contacto .row4 .options, .container .contacto-index .caja-contacto .row4 .btn-input, .container .contacto-index .caja-contacto .row4 .name-input, .container .contacto-index .caja-contacto .row4 .lastname-input, .container .contacto-index .caja-contacto .row4 .email-input, .container .contacto-index .caja-contacto .row4 .tel-input, .container .contacto-index .caja-contacto .row4 .mensaje-input {
+      font-size: 12px; }
+    .container .contacto-index .caja-contacto .btn-input {
+      font-size: 12px; }
+    .container .sobre-mi {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "item1 item1"
+ "item2 item2"
+ "item3 item4"; }
+      .container .sobre-mi .item1 {
+        font-size: 28px; }
+      .container .sobre-mi .item2, .container .sobre-mi .item3 {
+        font-size: 12px;
+        text-align: justify; }
+      .container .sobre-mi .letter {
+        font-size: 26px; }
+      .container .sobre-mi .item4 {
+        width: 350px;
+        justify-self: center;
+        background-position: top; }
+    .container .servicios h2 {
+      font-size: 20px; }
+    .container .servicios p {
+      font-size: 12px; }
+    .container .servicios .servicios-caja h3 {
+      padding: 30px;
+      font-size: 20px; }
+    .container .servicios .servicios-caja .servicios-fotos {
+      gap: 30px; }
+      .container .servicios .servicios-caja .servicios-fotos figure {
+        width: 250px;
+        height: 250px; }
+        .container .servicios .servicios-caja .servicios-fotos figure:hover > .capa h3 {
+          margin-top: 10px; }
+        .container .servicios .servicios-caja .servicios-fotos figure:hover > .capa2 h3 {
+          margin-top: 60px; }
+        .container .servicios .servicios-caja .servicios-fotos figure .capa2 h3 {
+          padding: 20px; }
+        .container .servicios .servicios-caja .servicios-fotos figure .capa p {
+          font-size: 14px;
+          max-width: 200px; }
+    .container .para-vos h2 {
+      font-size: 20px; }
+    .container .para-vos p {
+      font-size: 12px;
+      line-height: 2; }
+    .container .para-vos .videos {
+      flex-flow: row wrap; }
+      .container .para-vos .videos .video {
+        width: 250px; }
+    .container .galeria h2 {
+      font-size: 20px; }
+    .container .galeria .fotos-galeria .img1, .container .galeria .fotos-galeria .img2, .container .galeria .fotos-galeria .img3, .container .galeria .fotos-galeria .img4, .container .galeria .fotos-galeria .img5, .container .galeria .fotos-galeria .img6, .container .galeria .fotos-galeria .img7, .container .galeria .fotos-galeria .img8, .container .galeria .fotos-galeria .img9, .container .galeria .fotos-galeria .img10, .container .galeria .fotos-galeria .img11, .container .galeria .fotos-galeria .img12 {
+      width: 300px;
+      height: 500px; }
+    .container .contacto h2 {
+      font-size: 20px; }
+    .container .contacto .fb-contacto, .container .contacto .ig-contacto, .container .contacto .icono-mail {
+      width: 25px;
+      height: 25px; }
+    .container .contacto .mail-contacto p {
+      padding: 20px 10px; }
+    .container .contacto .linea-contacto {
+      width: 75vw;
+      height: 3px; }
+    .container .contacto p {
+      padding: 10px 30px;
+      font-size: 12px;
+      line-height: 2; }
+    .container .contacto .row1 .email-input, .container .contacto .row1 .tel-input, .container .contacto .row1 .name-input, .container .contacto .row1 .lastname-input, .container .contacto .row1 .options, .container .contacto .row2 .email-input, .container .contacto .row2 .tel-input, .container .contacto .row2 .name-input, .container .contacto .row2 .lastname-input, .container .contacto .row2 .options, .container .contacto .row3 .email-input, .container .contacto .row3 .tel-input, .container .contacto .row3 .name-input, .container .contacto .row3 .lastname-input, .container .contacto .row3 .options, .container .contacto .row4 .email-input, .container .contacto .row4 .tel-input, .container .contacto .row4 .name-input, .container .contacto .row4 .lastname-input, .container .contacto .row4 .options {
+      height: 25px; }
+    .container .contacto .row1 .options, .container .contacto .row2 .options, .container .contacto .row3 .options, .container .contacto .row4 .options {
+      padding: 4px; }
+    .container .contacto .row1 .name, .container .contacto .row1 .lastname, .container .contacto .row1 .mail, .container .contacto .row1 .tel, .container .contacto .row1 .motivo, .container .contacto .row1 .mensaje, .container .contacto .row1 .options, .container .contacto .row1 .name-input, .container .contacto .row1 .lastname-input, .container .contacto .row1 .email-input, .container .contacto .row1 .tel-input, .container .contacto .row1 .mensaje-input, .container .contacto .row2 .name, .container .contacto .row2 .lastname, .container .contacto .row2 .mail, .container .contacto .row2 .tel, .container .contacto .row2 .motivo, .container .contacto .row2 .mensaje, .container .contacto .row2 .options, .container .contacto .row2 .name-input, .container .contacto .row2 .lastname-input, .container .contacto .row2 .email-input, .container .contacto .row2 .tel-input, .container .contacto .row2 .mensaje-input, .container .contacto .row3 .name, .container .contacto .row3 .lastname, .container .contacto .row3 .mail, .container .contacto .row3 .tel, .container .contacto .row3 .motivo, .container .contacto .row3 .mensaje, .container .contacto .row3 .options, .container .contacto .row3 .name-input, .container .contacto .row3 .lastname-input, .container .contacto .row3 .email-input, .container .contacto .row3 .tel-input, .container .contacto .row3 .mensaje-input, .container .contacto .row4 .name, .container .contacto .row4 .lastname, .container .contacto .row4 .mail, .container .contacto .row4 .tel, .container .contacto .row4 .motivo, .container .contacto .row4 .mensaje, .container .contacto .row4 .options, .container .contacto .row4 .name-input, .container .contacto .row4 .lastname-input, .container .contacto .row4 .email-input, .container .contacto .row4 .tel-input, .container .contacto .row4 .mensaje-input {
+      font-size: 12px; }
+    .container .contacto .btn-input {
+      font-size: 12px; }
+    .container footer {
+      padding-bottom: 10px; }
+      .container footer .redes-footer {
+        height: auto;
+        padding: 20px 0px 10px 0px;
+        gap: 10px; }
+        .container footer .redes-footer .fb-footer, .container footer .redes-footer .ig-footer {
+          width: 40px;
+          height: 40px; }
+        .container footer .redes-footer .lineas {
+          width: 30vw; }
+      .container footer .logo-footer {
+        width: 150px; }
+      .container footer .footer-texto h2, .container footer .footer-texto h3 {
+        font-size: 14px;
+        margin-bottom: 8px; } }
 
-    }
-}
+@media (max-width: 767px) {
+  .container {
+    grid-template-rows: 50px 1.6fr 0.05fr; }
+    .container .menu-desktop {
+      display: none; }
+    .container .menu-mobile {
+      width: 100vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      background-color: #FFFFFF;
+      position: fixed;
+      top: 0;
+      z-index: 1; }
+      .container .menu-mobile #check {
+        display: none; }
+        .container .menu-mobile #check:checked ~ ul {
+          left: 0; }
+      .container .menu-mobile .check-btn {
+        display: flex;
+        flex-flow: unset;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 12px; }
+        .container .menu-mobile .check-btn .icono-menu {
+          width: 18px;
+          height: 18px; }
+      .container .menu-mobile .mobile-navbar {
+        width: 100%;
+        height: 450px;
+        background-color: #c7513d;
+        margin-top: 50px;
+        padding: 50px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        list-style: none;
+        position: fixed;
+        transition: all 0.5s;
+        left: -100%; }
+        .container .menu-mobile .mobile-navbar li {
+          display: flex;
+          flex-flow: unset;
+          justify-content: center;
+          align-items: center;
+          width: 200px;
+          height: 50px;
+          box-shadow: 6px 6px 30px 3px rgba(0, 0, 0, 0.5);
+          transition: all 0.5s; }
+          .container .menu-mobile .mobile-navbar li:hover {
+            background-color: #c51e00;
+            transform: scale(1.1); }
+          .container .menu-mobile .mobile-navbar li a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            width: unset;
+            text-align: unset;
+            padding: unset;
+            font-family: "Quicksand", sans-serif;
+            font-weight: normal;
+            font-size: 14px;
+            text-decoration: none;
+            color: #000000; }
+            .container .menu-mobile .mobile-navbar li a:hover {
+              font-weight: bold; }
+      .container .menu-mobile .logo-marca {
+        height: 50px;
+        justify-self: center; }
+        .container .menu-mobile .logo-marca .logo-mobile {
+          height: 50px; }
+    .container .banner {
+      height: 250px; }
+      .container .banner .banner-texto {
+        width: 100%;
+        padding: 10px;
+        font-size: 50px; }
+    .container .company {
+      display: none; }
+    .container .destacados {
+      padding-bottom: 0px; }
+      .container .destacados h3 {
+        font-size: 18px;
+        padding: 30px 30px 10px 30px; }
+      .container .destacados .curso1, .container .destacados .curso2 {
+        height: auto;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0px; }
+        .container .destacados .curso1 .foto1, .container .destacados .curso1 .foto2, .container .destacados .curso2 .foto1, .container .destacados .curso2 .foto2 {
+          display: none; }
+        .container .destacados .curso1 .curso1-texto, .container .destacados .curso2 .curso1-texto {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center; }
+          .container .destacados .curso1 .curso1-texto h4, .container .destacados .curso2 .curso1-texto h4 {
+            padding: 5px 20px 10px 20px;
+            font-size: 16px; }
+          .container .destacados .curso1 .curso1-texto p, .container .destacados .curso2 .curso1-texto p {
+            padding: 10px 20px 5px 20px;
+            font-size: 12px;
+            line-height: 2;
+            text-align: center; }
+        .container .destacados .curso1 .curso2-texto, .container .destacados .curso2 .curso2-texto {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center; }
+          .container .destacados .curso1 .curso2-texto h4, .container .destacados .curso2 .curso2-texto h4 {
+            padding: 20px 20px 10px 20px;
+            font-size: 16px; }
+          .container .destacados .curso1 .curso2-texto p, .container .destacados .curso2 .curso2-texto p {
+            color: #000000;
+            padding: 10px 20px 5px 20px;
+            font-size: 12px;
+            line-height: 2;
+            text-align: center; }
+        .container .destacados .curso1 .btn-dest, .container .destacados .curso2 .btn-dest {
+          display: flex;
+          flex-flow: row;
+          justify-content: center;
+          align-items: center;
+          padding: 20px; }
+          .container .destacados .curso1 .btn-dest a, .container .destacados .curso2 .btn-dest a {
+            width: unset;
+            text-align: center;
+            padding: 10px;
+            font-family: "Libre Baskerville", serif;
+            font-weight: normal;
+            font-size: 12px;
+            text-decoration: none;
+            color: #000000;
+            background-color: #FFE15D;
+            border-radius: 10px; }
+      .container .destacados .curso2 {
+        background-color: #FFFFFF; }
+    .container .reviews {
+      background-color: #000000;
+      padding-bottom: 10px; }
+      .container .reviews h3 {
+        font-size: 18px;
+        padding: 30px 30px 10px 30px;
+        color: #FFFFFF; }
+      .container .reviews .reseñas .opinion1 h4, .container .reviews .reseñas .opinion2 h4 {
+        font-size: 16px; }
+      .container .reviews .reseñas .opinion1 p, .container .reviews .reseñas .opinion2 p {
+        font-size: 12px;
+        line-height: 2; }
+      .container .reviews .reseñas .opinion1 .op1, .container .reviews .reseñas .opinion1 .op2, .container .reviews .reseñas .opinion2 .op1, .container .reviews .reseñas .opinion2 .op2 {
+        width: 150px;
+        height: 150px; }
+      .container .reviews .reseñas .opinion1 .opinion1-texto, .container .reviews .reseñas .opinion1 .opinion2-texto, .container .reviews .reseñas .opinion2 .opinion1-texto, .container .reviews .reseñas .opinion2 .opinion2-texto {
+        background-color: #FFFFFF;
+        border-radius: 20px;
+        width: 210px;
+        height: auto; }
+      .container .reviews .reseñas .opinion3, .container .reviews .reseñas .opinion4 {
+        display: none; }
+    .container .material-mobile {
+      display: flex; }
+      .container .material-mobile h4 {
+        width: unset;
+        text-align: center;
+        padding: 5px 20px 10px 20px;
+        font-family: "Quicksand", sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 10px;
+        color: #000000; }
+      .container .material-mobile p {
+        width: unset;
+        text-align: center;
+        padding: 5px 20px 10px 20px;
+        font-family: "Libre Baskerville", serif;
+        font-weight: normal;
+        font-size: 12px;
+        margin-bottom: 0px;
+        line-height: 2; }
+      .container .material-mobile .btn-dest {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px; }
+        .container .material-mobile .btn-dest a {
+          width: unset;
+          text-align: center;
+          padding: 10px;
+          font-family: "Libre Baskerville", serif;
+          font-weight: normal;
+          font-size: 12px;
+          text-decoration: none;
+          color: #000000;
+          background-color: #FFE15D;
+          border-radius: 10px; }
+    .container .contacto-index h3 {
+      font-size: 18px; }
+    .container .contacto-index .caja-contacto {
+      width: 100%;
+      height: auto;
+      padding-bottom: 10px; }
+      .container .contacto-index .caja-contacto .row1, .container .contacto-index .caja-contacto .row2, .container .contacto-index .caja-contacto .row3, .container .contacto-index .caja-contacto .row4 {
+        flex-flow: column; }
+        .container .contacto-index .caja-contacto .row1 .email-input, .container .contacto-index .caja-contacto .row1 .tel-input, .container .contacto-index .caja-contacto .row1 .name-input, .container .contacto-index .caja-contacto .row1 .lastname-input, .container .contacto-index .caja-contacto .row1 .options, .container .contacto-index .caja-contacto .row2 .email-input, .container .contacto-index .caja-contacto .row2 .tel-input, .container .contacto-index .caja-contacto .row2 .name-input, .container .contacto-index .caja-contacto .row2 .lastname-input, .container .contacto-index .caja-contacto .row2 .options, .container .contacto-index .caja-contacto .row3 .email-input, .container .contacto-index .caja-contacto .row3 .tel-input, .container .contacto-index .caja-contacto .row3 .name-input, .container .contacto-index .caja-contacto .row3 .lastname-input, .container .contacto-index .caja-contacto .row3 .options, .container .contacto-index .caja-contacto .row4 .email-input, .container .contacto-index .caja-contacto .row4 .tel-input, .container .contacto-index .caja-contacto .row4 .name-input, .container .contacto-index .caja-contacto .row4 .lastname-input, .container .contacto-index .caja-contacto .row4 .options {
+          height: 25px; }
+        .container .contacto-index .caja-contacto .row1 .options, .container .contacto-index .caja-contacto .row2 .options, .container .contacto-index .caja-contacto .row3 .options, .container .contacto-index .caja-contacto .row4 .options {
+          padding: 4px; }
+        .container .contacto-index .caja-contacto .row1 .name, .container .contacto-index .caja-contacto .row1 .name-input, .container .contacto-index .caja-contacto .row1 .mail, .container .contacto-index .caja-contacto .row1 .email-input, .container .contacto-index .caja-contacto .row2 .name, .container .contacto-index .caja-contacto .row2 .name-input, .container .contacto-index .caja-contacto .row2 .mail, .container .contacto-index .caja-contacto .row2 .email-input, .container .contacto-index .caja-contacto .row3 .name, .container .contacto-index .caja-contacto .row3 .name-input, .container .contacto-index .caja-contacto .row3 .mail, .container .contacto-index .caja-contacto .row3 .email-input, .container .contacto-index .caja-contacto .row4 .name, .container .contacto-index .caja-contacto .row4 .name-input, .container .contacto-index .caja-contacto .row4 .mail, .container .contacto-index .caja-contacto .row4 .email-input {
+          margin-right: 0px; }
+        .container .contacto-index .caja-contacto .row1 .name, .container .contacto-index .caja-contacto .row1 .lastname, .container .contacto-index .caja-contacto .row1 .mail, .container .contacto-index .caja-contacto .row1 .tel, .container .contacto-index .caja-contacto .row1 .motivo, .container .contacto-index .caja-contacto .row1 .mensaje, .container .contacto-index .caja-contacto .row1 .options, .container .contacto-index .caja-contacto .row1 .name-input, .container .contacto-index .caja-contacto .row1 .lastname-input, .container .contacto-index .caja-contacto .row1 .email-input, .container .contacto-index .caja-contacto .row1 .tel-input, .container .contacto-index .caja-contacto .row1 .mensaje-input, .container .contacto-index .caja-contacto .row2 .name, .container .contacto-index .caja-contacto .row2 .lastname, .container .contacto-index .caja-contacto .row2 .mail, .container .contacto-index .caja-contacto .row2 .tel, .container .contacto-index .caja-contacto .row2 .motivo, .container .contacto-index .caja-contacto .row2 .mensaje, .container .contacto-index .caja-contacto .row2 .options, .container .contacto-index .caja-contacto .row2 .name-input, .container .contacto-index .caja-contacto .row2 .lastname-input, .container .contacto-index .caja-contacto .row2 .email-input, .container .contacto-index .caja-contacto .row2 .tel-input, .container .contacto-index .caja-contacto .row2 .mensaje-input, .container .contacto-index .caja-contacto .row3 .name, .container .contacto-index .caja-contacto .row3 .lastname, .container .contacto-index .caja-contacto .row3 .mail, .container .contacto-index .caja-contacto .row3 .tel, .container .contacto-index .caja-contacto .row3 .motivo, .container .contacto-index .caja-contacto .row3 .mensaje, .container .contacto-index .caja-contacto .row3 .options, .container .contacto-index .caja-contacto .row3 .name-input, .container .contacto-index .caja-contacto .row3 .lastname-input, .container .contacto-index .caja-contacto .row3 .email-input, .container .contacto-index .caja-contacto .row3 .tel-input, .container .contacto-index .caja-contacto .row3 .mensaje-input, .container .contacto-index .caja-contacto .row4 .name, .container .contacto-index .caja-contacto .row4 .lastname, .container .contacto-index .caja-contacto .row4 .mail, .container .contacto-index .caja-contacto .row4 .tel, .container .contacto-index .caja-contacto .row4 .motivo, .container .contacto-index .caja-contacto .row4 .mensaje, .container .contacto-index .caja-contacto .row4 .options, .container .contacto-index .caja-contacto .row4 .name-input, .container .contacto-index .caja-contacto .row4 .lastname-input, .container .contacto-index .caja-contacto .row4 .email-input, .container .contacto-index .caja-contacto .row4 .tel-input, .container .contacto-index .caja-contacto .row4 .mensaje-input {
+          font-size: 12px;
+          width: 90vw; }
+      .container .contacto-index .caja-contacto .btn-input {
+        font-size: 12px; }
+    .container .sobre-mi {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.1fr 1fr 0.4fr;
+      grid-template-areas: "item1"
+ "item2"
+ "item3";
+      margin-bottom: 0px; }
+      .container .sobre-mi .item1 {
+        font-size: 20px; }
+      .container .sobre-mi .item2 {
+        grid-area: item2; }
+      .container .sobre-mi .item3 {
+        grid-area: item3; }
+      .container .sobre-mi .item2, .container .sobre-mi .item3 {
+        padding: 20px 30px;
+        font-size: 12px;
+        text-align: justify;
+        line-height: 2; }
+      .container .sobre-mi .letter {
+        font-size: 20px; }
+      .container .sobre-mi .item4 {
+        display: none; }
+    .container .servicios h2 {
+      font-size: 18px; }
+    .container .servicios p {
+      padding: 10px 25px 5px;
+      margin-top: 0px;
+      font-size: 12px;
+      line-height: 2; }
+    .container .servicios .servicios-caja h3 {
+      font-size: 18px; }
+    .container .servicios .servicios-caja .servicios-fotos figure {
+      width: 290px;
+      height: 290px; }
+      .container .servicios .servicios-caja .servicios-fotos figure:hover > .capa h3 {
+        margin-top: 30px; }
+      .container .servicios .servicios-caja .servicios-fotos figure:hover > .capa2 h3 {
+        margin-top: 40px; }
+      .container .servicios .servicios-caja .servicios-fotos figure .capa h3 {
+        padding: 20px 50px;
+        font-size: 20px; }
+      .container .servicios .servicios-caja .servicios-fotos figure .capa p {
+        font-size: 16px;
+        max-width: 250px; }
+      .container .servicios .servicios-caja .servicios-fotos figure .capa2 h3 {
+        font-size: 26px;
+        padding: 50px; }
+    .container .para-vos h2 {
+      font-size: 18px; }
+    .container .para-vos p {
+      padding: 10px 20px 20px;
+      font-size: 12px;
+      line-height: 2; }
+    .container .para-vos .videos {
+      width: 100vw;
+      flex-flow: column wrap;
+      align-content: center;
+      justify-content: center;
+      gap: 20px; }
+      .container .para-vos .videos .video {
+        width: 290px; }
+    .container .galeria h2 {
+      font-size: 18px; }
+    .container .galeria .fotos-galeria {
+      flex-flow: row wrap;
+      align-content: center;
+      gap: 15px;
+      margin-top: 0px;
+      margin-bottom: 15px; }
+      .container .galeria .fotos-galeria .img1, .container .galeria .fotos-galeria .img2, .container .galeria .fotos-galeria .img3, .container .galeria .fotos-galeria .img4, .container .galeria .fotos-galeria .img5, .container .galeria .fotos-galeria .img6, .container .galeria .fotos-galeria .img7, .container .galeria .fotos-galeria .img8, .container .galeria .fotos-galeria .img9, .container .galeria .fotos-galeria .img10, .container .galeria .fotos-galeria .img11, .container .galeria .fotos-galeria .img12 {
+        width: 290px;
+        height: 490px; }
+    .container .contacto h2 {
+      font-size: 18px; }
+    .container .contacto .fb-contacto, .container .contacto .ig-contacto, .container .contacto .icono-mail {
+      width: 25px;
+      height: 25px; }
+    .container .contacto .mail-contacto p {
+      font-size: 12px;
+      padding: 20px 10px; }
+    .container .contacto .linea-contacto {
+      width: 75vw;
+      height: 3px; }
+    .container .contacto p {
+      padding: 10px 20px;
+      font-size: 12px;
+      line-height: 2; }
+    .container .contacto .row1, .container .contacto .row2, .container .contacto .row3, .container .contacto .row4 {
+      flex-flow: column; }
+      .container .contacto .row1 .email-input, .container .contacto .row1 .tel-input, .container .contacto .row1 .name-input, .container .contacto .row1 .lastname-input, .container .contacto .row1 .options, .container .contacto .row2 .email-input, .container .contacto .row2 .tel-input, .container .contacto .row2 .name-input, .container .contacto .row2 .lastname-input, .container .contacto .row2 .options, .container .contacto .row3 .email-input, .container .contacto .row3 .tel-input, .container .contacto .row3 .name-input, .container .contacto .row3 .lastname-input, .container .contacto .row3 .options, .container .contacto .row4 .email-input, .container .contacto .row4 .tel-input, .container .contacto .row4 .name-input, .container .contacto .row4 .lastname-input, .container .contacto .row4 .options {
+        height: 25px; }
+      .container .contacto .row1 .options, .container .contacto .row2 .options, .container .contacto .row3 .options, .container .contacto .row4 .options {
+        padding: 4px; }
+      .container .contacto .row1 .name, .container .contacto .row1 .lastname, .container .contacto .row1 .mail, .container .contacto .row1 .tel, .container .contacto .row1 .motivo, .container .contacto .row1 .mensaje, .container .contacto .row1 .options, .container .contacto .row1 .name-input, .container .contacto .row1 .lastname-input, .container .contacto .row1 .email-input, .container .contacto .row1 .tel-input, .container .contacto .row1 .mensaje-input, .container .contacto .row2 .name, .container .contacto .row2 .lastname, .container .contacto .row2 .mail, .container .contacto .row2 .tel, .container .contacto .row2 .motivo, .container .contacto .row2 .mensaje, .container .contacto .row2 .options, .container .contacto .row2 .name-input, .container .contacto .row2 .lastname-input, .container .contacto .row2 .email-input, .container .contacto .row2 .tel-input, .container .contacto .row2 .mensaje-input, .container .contacto .row3 .name, .container .contacto .row3 .lastname, .container .contacto .row3 .mail, .container .contacto .row3 .tel, .container .contacto .row3 .motivo, .container .contacto .row3 .mensaje, .container .contacto .row3 .options, .container .contacto .row3 .name-input, .container .contacto .row3 .lastname-input, .container .contacto .row3 .email-input, .container .contacto .row3 .tel-input, .container .contacto .row3 .mensaje-input, .container .contacto .row4 .name, .container .contacto .row4 .lastname, .container .contacto .row4 .mail, .container .contacto .row4 .tel, .container .contacto .row4 .motivo, .container .contacto .row4 .mensaje, .container .contacto .row4 .options, .container .contacto .row4 .name-input, .container .contacto .row4 .lastname-input, .container .contacto .row4 .email-input, .container .contacto .row4 .tel-input, .container .contacto .row4 .mensaje-input {
+        font-size: 12px;
+        width: 90vw; }
+    .container .contacto .btn-input {
+      font-size: 12px; }
+    .container footer {
+      padding-bottom: 10px; }
+      .container footer .redes-footer {
+        height: auto;
+        padding: 20px 0px 10px 0px;
+        gap: 10px; }
+        .container footer .redes-footer .fb-footer, .container footer .redes-footer .ig-footer {
+          width: 30px;
+          height: 30px; }
+        .container footer .redes-footer .lineas {
+          width: 30vw; }
+      .container footer .logo-footer {
+        width: 100px; }
+      .container footer .footer-texto h2, .container footer .footer-texto h3 {
+        font-size: 10px;
+        margin-bottom: 8px; } }

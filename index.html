@@ -1,93 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menchu Tortas</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="./assets/img/MENCHU TORTAS.png" type="image/x-icon">
-
-
+    <meta name="keywords" content="pastelería, repostería, Hojaldre, Crema, dulce de leche, Torta, pastel, Bizcochuelo, decoracion, servicio de lunch, mesas dulces, catering">
+    <meta name="description" content="La mejor elaboracion de tortas artesanales, servicio de lunch y mesas dulces de todo Patagones">
+    <meta name="author" content="Nahuel">
+    <meta name="copyright" content="Menchu Tortas®">
+    <title>Menchu Tortas® - Home</title>
+    <link rel="shortcut icon" href="assets/img/MENCHU TORTAS.png" type="image/x-icon">
+    <link rel="icon" href="assets/img/MENCHU TORTAS.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <div >
-        <div class="test"> 
-            <div class="logo"><a href="./index.html"><img src="./assets/img/MENCHU TORTAS.png" alt=""></a>
+    <div class="container">
+        <header>
+            <div class="menu-mobile">
+                <input type="checkbox" id="check">
+                <label for="check" class="check-btn">
+                    <img src="assets/img/menu-hamburguesa.png" alt="menu hamburguesa" class="icono-menu">
+                </label>
+                <ul class="mobile-navbar">
+                    <li><a href=".//index.html">INICIO</a></li>
+                    <li><a href="./pages/sobre-mi.html">SOBRE MI</a></li>
+                    <li><a href="./pages/servicios.html">SERVICIOS</a></li>
+                    <li><a href="./pages/galeria.html">GALERIA</a></li>
+                    <li><a href="./pages/contacto.html">CONTACTO</a></li>
+                </ul>
+                </ul>
+                <div class="logo-marca">
+                    <a href="index.html"><img src="./assets/img/LG1.png" alt="Menchu Tortas" class="logo-mobile"></a>
+                </div>
+            </div>
+            <div class="menu-desktop">
+                <div class="logo">
+                    <a href="index.html"><img src="./assets/img/LG1.png" alt="Menchu Tortas" class="foto-logo" title="Home"></a>
+                </div>
+                <nav>
+                    <ul class="navbar">
+                        <li><a href="./index.html">INICIO</a></li>
+                        <li><a href="pages/sobre-mi.html">SOBRE MI</a></li>
+                        <li><a href="pages/servicios.html">SERVICIOS</a></li>
+                        <li><a href="pages/galeria.html">GALERIA</a></li>
+                        <li><a href="pages/contacto.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
+                <div class="redes">
+                    <a href="https://www.facebook.com/" target="blank"><img src="assets/img/facebook.png" alt="logo de facebook en negro" class="fb"></a>
+                    <a href="https://www.instagram.com/" target="blank"><img src="assets/img/instagram.png" alt="logo de instagram en negro" class="ig"></a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="banner"> <!-- banner -->
+                <h1 class="banner-texto">"Bienvenidos a la Food Factory!"</h1>
+            </section>    
+            <section class="company"> <!-- vision/mision/valores -->
+                <div class="mision">
+                    <img src="./assets/img/cohete1.png" alt="vector de cohete representando la misión" class="icon1">
+                    <div class="about1">
+                        <h2>MISION</h2>
+                        <p>Proporcionar a los clientes productos, horneados, frescos y de alta calidad, o algo más ambicioso como crear experiencias gastronómicas memorables que deleiten los sentidos.</p>
+                    </div>
+                </div>
+                <div class="vision">
+                    <img src="./assets/img/bombilla.png" alt="bombilla con tuerca adentro representando la visión" class="icon2">
+                    <div class="about2">
+                        <h2>VISION</h2>
+                        <p>Ser la pastelería líder en la zona, destacando por la calidad de sus productos y la excelente atención al cliente. </p>
+                    </div>
+                </div>
+                <div class="valores">
+                    <img src="./assets/img/diamante.png" alt="diamante representando los valores" class="icon3">
+                    <div class="about3">
+                        <h2>VALORES</h2>
+                        <p>En Menchu Tortas, nuestra pasión por el oficio impulsa la calidad de cada creación, buscando la innovación constante en nuestras recetas y presentaciones. Mantenemos una honestidad transparente en nuestros ingredientes y procesos, con un profundo respeto al cliente que se traduce en una calidez humana genuina en cada interacción.</p>
+                    </div>
+                </div>
+            </section>    
+            
+            <section class="reviews"> <!-- reseñas -->
+                <div>
+                    <h3>RESEÑAS DE CLIENTAS</h3>
+                </div>
+                <div class="reseñas">
+                    <div class="opinion1">
+                        <div class="opinion1 op1"></div> <!-- img -->
+                        <div class="opinion1-texto">
+                            <h4>Lucía Martínez</h4>
+                            <p>"¡Simplemente espectacular! Probé la torta de chocolate y quedé maravillado con la calidad de los ingredientes y el sabor intenso. Se nota la dedicación en cada detalle. Sin duda, volveré a elegirlos para mis celebraciones."</p>
+                        </div>
+                    </div>
+                    <div class="opinion2">
+                        <div class="opinion2 op2"></div> <!-- img -->
+                        <div class="opinion2-texto">
+                            <h4>Carla Sosa</h4>
+                            <p>"Me encantó la originalidad de sus propuestas. No solo tienen los clásicos, sino que se animan a innovar con combinaciones sorprendentes y presentaciones muy creativas. Pedí una torta temática y superó mis expectativas. ¡Un servicio que marca la diferencia!"</p>
+                        </div>
+                    </div>
+                    <div class="opinion3">
+                        <div class="opinion3 op3"></div> <!-- img -->
+                        <div class="opinion3-texto">
+                            <h4>Andrea Carranza</h4>
+                            <p>"Desde el primer contacto, la atención fue excelente. Se tomaron el tiempo para entender mis necesidades y ofrecerme la mejor opción. La persona que me atendió fue muy amable y transmitió una calidez humana que hizo la experiencia aún más agradable. ¡Se nota que disfrutan lo que hacen!"</p>
+                        </div>
+                    </div>
+                    <div class="opinion4">
+                        <div class="opinion4 op4"></div> <!-- img -->
+                        <div class="opinion4-texto">
+                            <h4>Marina Angelini</h4>
+                            <p>"Necesitaba una torta para un evento importante y cumplieron a la perfección con el pedido. La entrega fue puntual y la torta llegó en perfectas condiciones. Me transmitieron mucha confianza y demostraron ser un servicio muy profesional y confiable. ¡Los recomiendo totalmente si buscas tranquilidad y calidad!"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>    
+            <section class="material-mobile"> <!-- visible solo en mobile -->
+                <div class="material">
+                    <div>
+                        <h4>¿Sabías que tengo una sección completa con material gratuito?</h4>
+                        <p>En un mundo en el que parece que hay que pagar por todo, me pareció oportuno ofrecer algo de contenido de calidad sin costo alguno. Se trata de videos donde pueden verme aplicando diferentes técnicas, o explicando trucos para facilitarles el trabajo y que así disfruten más del proceso. Voy desde lo más básico, hasta algunos temas un poco más complejos y avanzados.
+                            <br>
+                            ¿Qué decís? ¿Le echás un vistazo?</p>
+                    </div>
+                </div>
+            </section>    
+            <section class="contacto-index"> <!-- contacto -->
+                    <h3>CONTACTAME</h3>
+                <form action="" method="post" class="caja-contacto">
+                        <div class="row1">
+                            <div class="row1-name">
+                                <label for="nombre">
+                                    <span class="name">Nombre</span>
+                                        <input type="text" name="" id="nombre" placeholder="Ingresa tu nombre" class="name-input">
+                                </label>
+                            </div>
+                            <div class="row1-lastname">
+                                <label for="apellido">
+                                    <span class="lastname">Apellido</span>
+                                        <input type="text" name="" id="apellido" placeholder="Ingresa tu apellido" class="lastname-input">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row2">
+                            <label for="mail">
+                                <span class="mail">Mail</span>
+                                    <input type="text" name="" id="email" placeholder="Ingresa tu email" class="email-input">
+                            </label>
+                            <label for="tel">
+                                <span class="tel">Tel</span>
+                                    <input type="number" name="" id="tel" placeholder="Ingresa tu teléfono" class="tel-input">
+                            </label>
+                        </div>
+                        <div class="row3">
+                            <label for="motivo">
+                                <span class="motivo">Motivo de consulta</span>
+                                <select name="cursos" id="motivo" class="options">
+                                    <option value="seleccion">Selecciona una opción</option>
+                                    <option value="Servicio de catering">Servicio de catering</option>
+                                    <option value="Mesa dulce">Mesa dulce</option>
+                                    <option value="Cupcakes">Cupcakes</option>
+                                    <option value="Tortas artesanales">Tortas artesanales</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="row4">
+                            <label for="mensaje">
+                                <span class="mensaje">Mensaje</span>
+                                <textarea name="" id="mensaje" cols="30" rows="10" placeholder="Deja tu mensaje" class="mensaje-input"></textarea>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="submit" class="btn-input">
+                            <input type="reset" class="btn-input">
+                        </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div class="redes-footer">
+                <hr class="lineas">
+                <a href="https://www.facebook.com/" target="blank"><img src="assets/img/fb-blanco.png" alt="logo de facebook en blanco" class="fb-footer"></a>
+                <a href="https://www.instagram.com/" target="blank"><img src="assets/img/ig-blanco.png" alt="logo de instagram en blanco" class="ig-footer"></a>
+                <hr class="lineas">
             </div>
             <div>
-                <h1 class="titulo">MENCHU TORTAS</h1>
-                <h2 class="subtitulo">Tortas, Mesas Dulces y Servicio de Lunch - Repostería a Domicilio</h2>
+                <img src="./assets/img/logo.jpg" alt="logo de la marca" class="logo-footer">
             </div>
+            <div class="footer-texto">
+                <h2>Copyright © 2025</h2>
+                <h3>Menchu Tortas®</h3>
             </div>
-        <nav>
-            <ul class="navBar">
-                <li>
-                    <a href="./pages/Nosotros.html">NOSOTROS</a>
-                </li>
-                <li>
-                    <a href="./pages/tortas.html">TORTAS</a>
-                </li>
-                <li>
-                    <a href="./pages/serviciodelunch.html">SERVICIO DE LUNCH</a>
-                </li>
-                <li>
-                    <a href="./pages/mesasdulces.html">MESAS DULCES</a>
-                </li>
-                <li>
-                    <a href="./pages/contacto.html">CONTACTO</a>
-                </li>
-            </ul>
-        </nav>
+        </footer>
     </div>
-
-
-    <main>
-        <div class="test2">
-            <div class="tortas-artesanales">
-                <a href="./pages/tortas.html"><img src="./assets/img/tortas.jpg" alt="">
-                </a>
-            </div>
-            <div class="serviciodelunch"><a href="./pages/serviciodelunch.html"><img
-                src="./assets/img/servicio de lunch.jpg"></a></div>
-            <div class="mesasdulces"> <a href="./pages/mesasdulces.html"><img src="./assets/img/mesa-dulce.jpeg"
-            alt=""></a>
-        </div>
-
-    </main>
-
-    <footer>
-        <div>
-            <ul class="test3">
-                <div class="derechos">
-                    Todos los derechos reservados
-                </div>
-            <li><a href="https://www.facebook.com/"><img
-                src="./assets/img/facebook icon.png" alt="Menchu tortas facebook"></a>
-            </li>
-            <li>
-                <a
-                href="https://api.whatsapp.com/"><img
-                    src="./assets/img/whatsapp icon.jpg" alt="Menchu tortas whatsapp"></a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com"><img src="./assets/img/instagram icon.jpg"
-                    alt="Menchu tortas Instagram"></a>
-            </li>
-        </ul>
-        
-        </div>
-
-    </footer>
-
 </body>
-
 </html>

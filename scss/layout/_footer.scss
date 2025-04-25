@@ -1,0 +1,32 @@
+footer {
+    @extend %medidas;
+    padding-bottom: 15px;
+    background-color: $color-secundario;
+    .redes-footer {
+        @include medidas (100%, 100px);
+        padding-top: 20px;
+        @include flex (row, center, center);
+        gap: 15px;
+        .fb-footer, .ig-footer {
+            @include medidas (70px, 70px);
+        }    
+        .lineas {
+            background-color: $color-principal;
+            @include medidas (35vw, 1px);
+        }
+    }   
+    .logo-footer {
+        @include medidas (250px, auto);
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+    }    
+    .footer-texto {
+        h2, h3 {
+            @include title (100%, center, unset, $tipografia-principal, normal, 16px);
+            color: $color-principal;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+    }
+}

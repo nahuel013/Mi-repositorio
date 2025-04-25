@@ -1,0 +1,49 @@
+.menu-mobile {
+    display: none;
+}
+.menu-desktop {
+    @extend %header;
+    .logo {
+        grid-area: logo;
+        align-self: start;
+        margin-top: 40px;
+        padding-top: 40PX
+        @include flex (none, center, center);
+        .foto-logo {
+            @include medidas (250px, auto);
+        }
+    }
+    nav {
+        grid-area: nav;
+        @include flex (none, center, center);
+        .navbar {
+            display: flex;
+            gap: 80px;
+            li {
+                list-style: none;
+                transition: all 0.5s;
+                &:hover {    
+                    transform:scale(1.1);
+                }
+                a {
+                    @include title (unset, center, 10px 15px, $tipografia-secundaria, normal, 32px);
+                    text-decoration: none;
+                    color: $color-secundario;
+                    &:hover{
+                        font-weight: bold;
+                        background-color: $color-terciario;
+                        border-radius: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .redes {
+        grid-area: redes;
+        @include flex (row, center, center);
+        gap: 20px;
+        .fb, .ig {
+            @include medidas (50px, 50px);
+        }
+    }
+}

@@ -1,0 +1,322 @@
+@media (max-width: 1023px) {
+    .container {
+        grid-template-rows: 70px 1fr 0.05fr;
+        .menu-desktop {
+            display: none;
+        }
+        .menu-mobile {
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            background-color: $color-principal; /* Assuming $color-principal is defined elsewhere */
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            #check {
+                display: none;
+                &:checked ~ ul{
+                    left: 0;
+                }
+            }
+            .check-btn {
+                @include flex (unset, flex-start, center); /* Assuming @include flex is a mixin */
+                padding-left: 12px;
+                .icono-menu {
+                    @include medidas (24px, 24px); /* Assuming @include medidas is a mixin */
+                }
+            }
+            .mobile-navbar {
+                @include medidas (100%, 500px); /* Assuming @include medidas is a mixin */
+                background-color: $color-mobile; /* Assuming $color-mobile is defined elsewhere */
+                margin-top: 70px;
+                padding: 50px;
+                @include flex (column, center, center); /* Assuming @include flex is a mixin */
+                text-align: center;
+                gap: 30px;
+                list-style: none;
+                position: fixed;
+                transition: all 0.5s;
+                left: -100%;
+                li{
+                    @include flex (unset, center, center); /* Assuming @include flex is a mixin */
+                    @include medidas (200px, 50px); /* Assuming @include medidas is a mixin */
+                    box-shadow: 6px 6px 30px 3px $box-shadow; /* Assuming $box-shadow is defined elsewhere */
+                    transition: all 0.5s;
+                    &:hover{
+                        background-color: $color-terciario; /* Assuming $color-terciario is defined elsewhere */
+                        transform:scale(1.1);
+                    }
+                    a{
+                        @include flex (unset, center, center); /* Assuming @include flex is a mixin */
+                        border-radius: 20px;
+                        @include medidas (100%, 100%); /* Assuming @include medidas is a mixin */
+                        text-decoration: none;
+                        color: $color-secundario; /* Assuming $color-secundario is defined elsewhere */
+                        font-family: $tipografia-secundaria; /* Assuming $tipografia-secundaria is defined elsewhere */
+                        font-weight: normal;
+                        font-size: 18px;
+                        &:hover{
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            .logo-marca {
+                height: 70px;
+                justify-self: center;
+                .logo-mobile {
+                    height: 70px;
+                }
+            }
+        }
+        .banner {
+            height: 480px;
+            .banner-texto {
+                width: 35%;
+                padding: 40px;
+                font-size: 45px;
+            }
+        }
+        .company {
+            padding-bottom: 20px;
+            .mision, .vision, .valores {
+                img {
+                    @include medidas (100px, 100px); /* Assuming @include medidas is a mixin */
+                }
+                .about1, .about2, .about3 {
+                    @include medidas (240px, 240px); /* Assuming @include medidas is a mixin */
+                    h2 {
+                        font-size: 18px;
+                        padding: 0px;
+                    }
+                    p {
+                        font-size: 12px;
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+        .destacados {
+            h3 {
+                font-size: 20px;
+                padding: 30px;
+            }
+            .curso1, .curso2 {
+                height: 230px;
+                margin: 20px 0px;
+                .foto1 {
+                    @include medidas (230px, 230px); /* Assuming @include medidas is a mixin */
+                }
+                .curso1-texto {
+                    @include medidas (65%, auto); /* Assuming @include medidas is a mixin */
+                    h4 {
+                        font-size: 16px;
+                        padding: 5px;
+                    }
+                    p {
+                        font-size: 14px;
+                        padding: 0px 5px;
+                    }
+                }
+                .foto2 {
+                    @include medidas (230px, 230px); /* Assuming @include medidas is a mixin */
+                }
+                .curso2-texto {
+                    @include medidas (65%, auto); /* Assuming @include medidas is a mixin */
+                    h4 {
+                        font-size: 16px;
+                        padding: 5px;
+                    }
+                    p {
+                        font-size: 14px;
+                        padding: 0px 5px;
+                    }
+                }
+            }
+        }
+        .reviews {
+            h3 {
+                font-size: 20px;
+                padding: 30px;
+            }
+            .reseñas {
+                .opinion1, .opinion2, .opinion3 {
+                    .op1, .op2, .op3 {
+                        @include medidas (150px, 150px); /* Assuming @include medidas is a mixin */
+                    }
+                    .opinion1-texto, .opinion2-texto, .opinion3-texto {
+                        @include medidas (250px, 250px); /* Assuming @include medidas is a mixin */
+                        h4 {
+                            font-size: 18px;
+                        }
+                        p {
+                            font-size: 12px;
+                            line-height: 2;
+                        }
+                    }
+                }
+                .opinion4 {
+                    display: none;
+                }
+            }
+        }
+        .contacto-index {
+            h3 {
+                font-size: 20px;
+            }
+            .caja-contacto {
+                .row1, .row2, .row3, .row4 {
+                    .email-input, .tel-input, .name-input, .lastname-input, .options {
+                        height: 25px;
+                    }
+                    .options {
+                        padding: 4px;
+                    }
+                    .name, .lastname, .mail, .tel, .motivo, .mensaje, .options, .btn-input, .name-input, .lastname-input, .email-input, .tel-input,.mensaje-input {
+                        font-size: 12px;
+                    }
+                }
+                .btn-input {
+                    font-size: 12px;
+                }
+            }
+        }
+        .sobre-mi {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+            "item1 item1"
+            "item2 item2"
+            "item3 item4";
+        }
+            .item1 {
+                font-size: 28px;
+            }
+            .item2, .item3 {
+                font-size: 12px;
+                text-align: justify;
+            }
+            .letter {
+                font-size: 26px;
+            }
+            .item4 {
+                width: 350px;
+                justify-self: center;
+                background-position: top;
+            }
+        }
+        .servicios {
+            h2 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 12px;
+            }
+            .servicios-caja {
+                h3 {
+                    font-size: 20px;
+                    padding: 30px;
+                }
+                .servicios-fotos {
+                    figure {
+                        @include medidas (200px, 200px); /* Assuming @include medidas is a mixin */
+                        &:hover > .capa h3 {
+                            margin-top: 10px;
+                            font-size: 20px;
+                            padding: 5px;
+                        }
+                        &:hover > .capa2 h3 {
+                            margin-top: 60px;
+                            font-size: 20px;
+                            padding: 5px;
+                        }
+                        .capa h3, .capa2 h3 {
+                            font-size: 20px;
+                            padding: 5px;
+                        }
+                        .capa p {
+                            font-size: 12px;
+                            max-width: 180px;
+                        }
+                    }
+                }
+            }
+        }
+        .para-vos {
+            h2 {
+                font-size: 20px;
+                padding: 30px;
+            }
+            p {
+                font-size: 12px;
+                padding: 10px 30px 50px;
+            }
+            .videos {
+                .video {
+                    width: 300px;
+                }
+            }
+        }
+        .galeria {
+            h2 {
+                font-size: 20px;
+                padding: 30px;
+            }
+            .fotos-galeria {
+                .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11, .img12 {
+                    width: 300px;
+                    height: 450px;
+                }
+            }
+        }
+        .contacto {
+            h2 {
+                font-size: 20px;
+                padding: 30px;
+            }
+            .fb-contacto, .ig-contacto, .icono-mail {
+                @include medidas (25px, 25px); /* Assuming @include medidas is a mixin */
+            }
+            .mail-contacto {
+                p {
+                    font-size: 14px;
+                    padding: 10px;
+                }
+            }
+            p {
+                font-size: 12px;
+                padding: 10px 30px;
+            }
+            .caja-contacto2 {
+                .row1, .row2, .row3, .row4 {
+                    .email-input, .tel-input, .name-input, .lastname-input, .options {
+                        height: 25px;
+                    }
+                    .name-input, .lastname-input, .email-input, .tel-input,.mensaje-input, .options {
+                        padding: 4px;
+                    }
+                    .name, .lastname, .mail, .tel, .motivo, .mensaje, .options, .name-input, .lastname-input, .email-input, .tel-input,.mensaje-input {
+                        font-size: 12px;
+                    }
+                }
+                .btn-input {
+                    font-size: 12px;
+                }
+            }
+        }
+        footer {
+            .redes-footer {
+                .fb-footer, .ig-footer {
+                    @include medidas (40px, 40px); /* Assuming @include medidas is a mixin */
+                }
+            }
+            .logo-footer {
+                width: 120px;
+            }
+            .footer-texto {
+                h2, h3 {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

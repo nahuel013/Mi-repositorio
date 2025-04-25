@@ -1,0 +1,29 @@
+%header {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1.5fr 6fr 1fr;
+    grid-template-rows: 150px;
+    grid-template-areas: 
+    "logo nav redes";
+    justify-content: space-evenly;
+    background-color: $color-principal;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+%medidas {
+    width: 100%;
+    height: auto;
+}
+
+%button  {
+    padding: 10px;
+    border-radius: 8px;
+    border-style: none;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 28px;
+    font-family: $tipografia-principal;
+    font-weight: normal;
+}

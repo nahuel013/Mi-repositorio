@@ -1,0 +1,29 @@
+@mixin medidas ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flex($uno, $dos, $tres) {
+    display: flex;
+    flex-flow: $uno;
+    justify-content: $dos;
+    align-items: $tres;
+}
+
+@mixin foto-model ($width, $height, $border-radius, $size, $position, $url) {
+    width: $width;
+    height: $height;
+    border-radius: $border-radius;
+    background-size: $size;
+    background-position: $position;
+    background-image: $url;
+}
+
+@mixin title ($width, $text, $padding, $tipografia, $weight, $font) {
+    width: $width;
+    text-align: $text;
+    padding: $padding;
+    font-family: $tipografia;
+    font-weight: $weight;
+    font-size: $font;
+}

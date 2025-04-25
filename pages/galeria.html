@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="pastelería, repostería, Hojaldre, Crema, dulce de leche, Torta, pastel, Bizcochuelo, decoracion, servicio de lunch, mesas dulces, catering">
+    <meta name="description"
+        content="La mejor elaboración de tortas artesanales, servicio de lunch y mesas dulces de todo Patagones">
+    <meta name="author" content="Nahuel">
+    <title>MENCHU TORTAS</title>
+    <link rel="shortcut icon" href="../assets/img/MENCHU TORTAS.png" type="image/x-icon">
+    <link rel="icon" href="../assets/img/LG1.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="menu-mobile">
+                <input type="checkbox" id="check">
+                <label for="check" class="check-btn">
+                    <img src="../assets/img/menu-hamburguesa.png" alt="menu hamburguesa" class="icono-menu">
+                </label>
+                <ul class="mobile-navbar">
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="./sobre-mi.html">SOBRE MI</a></li>
+                    <li><a href="./servicios.html">SERVICIOS</a></li>
+                    <li><a href="./galeria.html">GALERIA</a></li>
+                    <li><a href="./contacto.html">CONTACTO</a></li>
+                </ul>
+                <div class="logo-marca">
+                    <a href="../index.html"><img src="../assets/img/LG1.png" alt="logo de Menchu Tortas"
+                            class="logo-mobile"></a>
+                </div>
+            </div>
+
+            <div class="menu-desktop">
+                <div class="logo">
+                    <a href="../index.html"><img src="../assets/img/LG1.png" alt="logo de Menchu Tortas"
+                            class="foto-logo" title="Home"></a>
+                </div>
+                <nav>
+                    <ul class="navbar">
+                        <li><a href="../index.html">INICIO</a></li>
+                        <li><a href="./sobre-mi.html">SOBRE MI</a></li>
+                        <li><a href="./servicios.html">SERVICIOS</a></li>
+                        <li><a href="./galeria.html">GALERIA</a></li>
+                        <li><a href="./contacto.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
+                <div class="redes">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img
+                            src="../assets/img/facebook.png" alt="logo de facebook en negro" class="fb"></a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img
+                            src="../assets/img/instagram.png" alt="logo de instagram en negro" class="ig"></a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="banner">
+                <h1 class="banner-texto">"Bienvenidos a la Food Factory!"</h1>
+            </section>
+            <section class="Titulo_galeria">
+                <h1 class="Galeria_texto">ALGUNAS DE NUESTRAS CREACIONES </h1>
+
+            </section>
+            <div class="carousel-container">
+                <div id="myCarousel" class="carousel">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="../assets/img/foto-galeria1.jpg" alt="Mesa dulce">
+                            <div class="carousel-caption">
+                                <h3>Budin de cereza</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../assets/img/foto-galeria2.jpg" alt="Servicio de lunch">
+                            <div class="carousel-caption">
+                                <h3>Pancake</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../assets/img/foto-galeria3.jpg" alt="Torta de chocolate">
+                            <div class="carousel-caption">
+                                <h3>Profiteroles</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../assets/img/foto-galeria4.jpg" alt="Torta de frutas">
+                            <div class="carousel-caption">
+                                <h3>Torta china</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../assets/img/foto-galeria5.jpg" alt="Torta decorada">
+                            <div class="carousel-caption">
+                                <h3>Budin de dulce de leche</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../assets/img/foto-galeria6.jpg" alt="Torta personalizada">
+                            <div class="carousel-caption">
+                                <h3>Magdalena</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control prev" onclick="moveSlide(-1)">‹</button>
+                    <button class="carousel-control next" onclick="moveSlide(1)">›</button>
+                    <div class="carousel-indicators" id="indicators">
+                        <!-- Los indicadores se generan con JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="redes-footer">
+                <hr class="lineas">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img
+                        src="../assets/img/fb-blanco.png" alt="logo de facebook en blanco" class="fb-footer"></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img
+                        src="../assets/img/ig-blanco.png" alt="logo de instagram en blanco" class="ig-footer"></a>
+                <hr class="lineas">
+            </div>
+            <div>
+                <img src="../assets/img/logo.jpg" alt="logo footer" class="logo-footer">
+            </div>
+            <div class="footer-texto">
+                <h2>Copyright © 2025</h2>
+                <h3>Menchu Tortas®</h3>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Versión mejorada de tu carrusel
+        document.addEventListener('DOMContentLoaded', function () {
+            // Configuración del carrusel
+            let currentIndex = 0;
+            const items = document.querySelectorAll(".carousel .item");
+            const indicatorsContainer = document.getElementById('indicators');
+
+            // Crear indicadores dinámicamente
+            items.forEach((_, index) => {
+                const indicator = document.createElement('div');
+                indicator.classList.add('carousel-indicator');
+                if (index === 0) indicator.classList.add('active');
+                indicator.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateCarousel();
+                });
+                indicatorsContainer.appendChild(indicator);
+            });
+
+            const indicators = document.querySelectorAll('.carousel-indicator');
+
+            function updateCarousel() {
+                // Actualizar slides
+                items.forEach((item, i) => {
+                    item.classList.toggle("active", i === currentIndex);
+                });
+
+                // Actualizar indicadores
+                indicators.forEach((indicator, i) => {
+                    indicator.classList.toggle('active', i === currentIndex);
+                });
+            }
+
+            // Control de navegación
+            function moveSlide(step) {
+                currentIndex = (currentIndex + step + items.length) % items.length;
+                updateCarousel();
+                resetAutoSlide(); // Reiniciar el auto-avance después de interacción manual
+            }
+
+            // Auto-avance con pausa al interactuar
+            let autoSlideInterval;
+
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(() => {
+                    moveSlide(1);
+                }, 2000);
+            }
+
+            function resetAutoSlide() {
+                clearInterval(autoSlideInterval);
+                startAutoSlide();
+            }
+
+            // Event listeners para los controles
+            document.querySelector('.carousel-control.prev').addEventListener('click', () => moveSlide(-1));
+            document.querySelector('.carousel-control.next').addEventListener('click', () => moveSlide(1));
+
+            // Pausar al hacer hover
+            const carousel = document.getElementById('myCarousel');
+            carousel.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+            carousel.addEventListener('mouseleave', startAutoSlide);
+
+            // Inicializar
+            updateCarousel();
+            startAutoSlide();
+        });
+    </script>
+</body>
+</html>
