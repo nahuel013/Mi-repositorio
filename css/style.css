@@ -35,7 +35,7 @@
   width: 100%;
   height: auto; 
   padding-top: 40px;
-  padding-bottom: 70px;}
+  padding-bottom: 140px;}
 
 .contacto-index .caja-contacto .btn-input, .contacto .caja-contacto2 .btn-input {
   padding: 10px;
@@ -104,7 +104,7 @@
 .banner {
   width: 100%;
   height: 950px;
-  border-radius: none;
+  border-radius: 0;
   background-size: cover;
   background-position: center;
   background-image: url(../assets/img/fondo12.jpg);
@@ -182,6 +182,10 @@
     color: #000000; }
   .reviews .reseñas {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center; }
@@ -191,7 +195,7 @@
       justify-content: center;
       align-items: center;
       margin-top: 10px;
-      margin-bottom: 15px; }
+      margin-bottom: 40px; }
       .reviews .reseñas .opinion1 .op1, .reviews .reseñas .opinion2 .op1, .reviews .reseñas .opinion3 .op1, .reviews .reseñas .opinion4 .op1 {
         width: 350px;
         height: 350px;
@@ -1315,7 +1319,10 @@ footer {
         font-size: 12px;
         line-height: 2; }
     .container .reviews .reseñas .opinion4 {
-      display: none; }
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;}
     .container .contacto-index h3 {
       font-size: 20px; }
     .container .contacto-index .caja-contacto .row1 .email-input, .container .contacto-index .caja-contacto .row1 .tel-input, .container .contacto-index .caja-contacto .row1 .name-input, .container .contacto-index .caja-contacto .row1 .lastname-input, .container .contacto-index .caja-contacto .row1 .options, .container .contacto-index .caja-contacto .row2 .email-input, .container .contacto-index .caja-contacto .row2 .tel-input, .container .contacto-index .caja-contacto .row2 .name-input, .container .contacto-index .caja-contacto .row2 .lastname-input, .container .contacto-index .caja-contacto .row2 .options, .container .contacto-index .caja-contacto .row3 .email-input, .container .contacto-index .caja-contacto .row3 .tel-input, .container .contacto-index .caja-contacto .row3 .name-input, .container .contacto-index .caja-contacto .row3 .lastname-input, .container .contacto-index .caja-contacto .row3 .options, .container .contacto-index .caja-contacto .row4 .email-input, .container .contacto-index .caja-contacto .row4 .tel-input, .container .contacto-index .caja-contacto .row4 .name-input, .container .contacto-index .caja-contacto .row4 .lastname-input, .container .contacto-index .caja-contacto .row4 .options {
@@ -1499,7 +1506,11 @@ footer {
         padding: 10px;
         font-size: 50px; }
     .container .company {
-      display: none; }
+      display: flex; 
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 20px; }
     .container .destacados {
       padding-bottom: 0px; }
       .container .destacados h3 {
@@ -1565,7 +1576,7 @@ footer {
       .container .destacados .curso2 {
         background-color: #FFFFFF; }
     .container .reviews {
-      background-color: #000000;
+      background-color: #00000000;
       padding-bottom: 10px; }
       .container .reviews h3 {
         font-size: 18px;
@@ -1585,7 +1596,9 @@ footer {
         width: 210px;
         height: auto; }
       .container .reviews .reseñas .opinion3, .container .reviews .reseñas .opinion4 {
-        display: none; }
+        display: flex;
+        flex-flow: column;
+        justify-content: center;}
     .container .material-mobile {
       display: flex; }
       .container .material-mobile h4 {
@@ -1663,7 +1676,7 @@ footer {
       .container .sobre-mi .letter {
         font-size: 20px; }
       .container .sobre-mi .item4 {
-        display: none; }
+        display: block; }
     .container .servicios h2 {
       font-size: 18px; }
     .container .servicios p {
@@ -1756,3 +1769,24 @@ footer {
       .container footer .footer-texto h2, .container footer .footer-texto h3 {
         font-size: 10px;
         margin-bottom: 8px; } }
+        @media (max-width: 767px) {
+          .sobre-mi {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+        .sobre-mi .item4  {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-flow: column;
+          margin: 10px;
+          justify-content: center;
+          align-items: center;
+          padding: 150px 100px;
+          font-size: 12px;
+          text-align: justify;
+          margin-bottom: 20px;
+          text-align: center;
+        }
